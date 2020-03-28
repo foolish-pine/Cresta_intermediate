@@ -5,17 +5,14 @@
 .p-header {
 	width: 100%;
 	max-width: $max-width;
-	height: 75px;
 	margin: 0 auto;
-	border-bottom: solid 1px $color-header-border;
-	background: $color-header-bg;
 
 	&__inner {
 		display: flex;
 		position: relative;
 		max-width: $max-width-inner-sp;
 		justify-content: space-between;
-		margin: 0 auto;
+		margin: 30px auto 0;
 
 		@include mq(pc) {
 			max-width: $max-width-header-inner-pc;
@@ -23,7 +20,6 @@
 	}
 
 	&__logo {
-		margin-top: 20px;
 
 		a {
 			text-decoration: none;
@@ -31,10 +27,10 @@
 
 		h1 {
 			color: #fff;
-			font-family: 'Roboto', sans-serif;
 			font-weight: 500;
 			font-size: 2.6rem;
-			letter-spacing: 0;
+			letter-spacing: .05em;
+			font-style: italic;
 		}
 	}
 
