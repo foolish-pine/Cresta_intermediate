@@ -784,7 +784,7 @@ img {
    ================================================================ */
 .p-service {
   margin-top: -86px;
-  padding: 186px 0 40px;
+  padding: 186px 0 60px;
 }
 
 .p-service__inner {
@@ -898,7 +898,10 @@ img {
   Contact
    ================================================================ */
 .p-contact {
-  padding-top: 97px;
+  padding: 100px 0 40px;
+  background-image: url(../../../image/contact-bgi@2x.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .p-contact__inner {
@@ -914,38 +917,34 @@ img {
 }
 
 .p-contact__sectionTitle {
-  line-height: 2;
-  margin-bottom: 60px;
-  font-weight: bold;
-  font-size: 2.4rem;
-  letter-spacing: .1;
+  color: #fff;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 80px;
 }
 
-.p-contact__textbox {
-  width: 100%;
-  line-height: 1.8;
-  margin-bottom: 22px;
-  border: solid 1px #141414;
+.p-contact__sectionTitle::after {
+  background-color: #fff;
 }
 
-.p-contact form label {
-  font-family: 'Hiragino Kaku Gothic ProN';
-}
-
-.p-contact__messageArea {
-  margin-bottom: 27px;
-}
-
-.p-contact__messageArea textarea {
-  width: 100%;
-  line-height: 1.8;
-  height: 171px;
-  line-height: 1.5;
-  border: solid 1px #141414;
+.p-contact__text {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .p-contact__button {
-  margin: 0 auto 50px;
+  margin: 0 auto 40px;
+}
+
+.p-contact__sectionWatermark {
+  text-align: left;
+  color: #fff;
+  opacity: 0.1;
 }
 
 /* ================================================================
@@ -954,9 +953,8 @@ img {
 .p-footer {
   width: 100%;
   max-width: 1440px;
-  height: 60px;
+  height: 80px;
   margin: 0 auto;
-  background-color: #1B1310;
 }
 
 @media print, screen and (min-width: 768px) {
@@ -971,9 +969,9 @@ img {
 }
 
 .p-footer p {
-  line-height: 60px;
-  color: #fff;
-  font-weight: regular;
+  line-height: 80px;
+  color: #282F35;
+  font-weight: 700;
   font-size: 1.4rem;
   text-align: center;
   letter-spacing: .05em;
