@@ -3,6 +3,46 @@
    ================================================================ */
 
 // ---------------------------------------------
+// スティッキーヘッダー
+// ---------------------------------------------
+
+$(function () {
+  var $window = $(window),
+    $header = $('.l-header'),
+    $headerClone = $header.contents().clone(),
+    $headerCloneContainer = $('<div class="l-header--clone"></div>'),
+    threshold = $('.p-mainVisual').outerHeight();
+
+  $headerCloneContainer.append($headerClone);
+  $headerCloneContainer.appendTo('body');
+
+  $window.on('load', function () {
+    if ($window.scrollTop() > threshold) {
+      $headerCloneContainer.addClass('visible');
+    } else {
+      $headerCloneContainer.removeClass('visible');
+    }
+  });
+
+var timer = false;
+$window.on('scroll', function () {
+  if (timer !== false) {
+    clearTimeout(timer);
+  }
+  timer = setTimeout(function () {
+    $window.on('scroll', function () {
+      if ($window.scrollTop() > threshold) {
+        $headerCloneContainer.addClass('visible');
+      } else {
+        $headerCloneContainer.removeClass('visible');
+      }
+    });
+  }, 60);
+});
+$window.trriger('scroll');
+});
+
+// ---------------------------------------------
 // ハンバーガーメニュー
 // ---------------------------------------------
 
@@ -48,8 +88,8 @@ $(function () {
   $('.js-smoothscroll').click(function () {
     var speed = 500;
     href = $(this).attr("href"),
-    target = $(href == "#" || href == "" ? 'html' : href),
-    position = target.offset().top;
+      target = $(href == "#" || href == "" ? 'html' : href),
+      position = target.offset().top;
     $('html, body').animate({ scrollTop: position }, speed);
   });
 });

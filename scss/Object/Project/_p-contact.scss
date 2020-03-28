@@ -3,7 +3,10 @@
    ================================================================ */
 
 .p-contact {
-	padding-top: 97px;
+	padding: 100px 0 45px;
+	background-image: url(../../../image/contact-bgi@2x.jpg);
+	background-position: center;
+	background-size: cover;
 
 	&__inner {
 		width: 100%;
@@ -16,39 +19,31 @@
 	}
 
 	&__sectionTitle {
-		line-height: 2;
-		margin-bottom: 60px;
-		font-weight: bold;
-		font-size: 2.4rem;
-		letter-spacing: .1;
-	}
+		color: #fff;
+		justify-content: flex-end;
+		margin-bottom: 82px;
 
-	&__textbox {
-		width: 100%;
-		line-height: 1.8;
-		margin-bottom: 22px;
-		border: solid 1px $color-form-border;
-	}
-
-	form {
-		label {
-			font-family: 'Hiragino Kaku Gothic ProN';
+		&::after {
+			background-color: #fff;
 		}
 	}
 
-	&__messageArea {
-		margin-bottom: 27px;
-
-		textarea {
-			width: 100%;
-			line-height: 1.8;
-			height: 171px;
-			line-height: 1.5;
-			border: solid 1px $color-form-border;
-		}
+	&__text {
+		color: #fff;
+		font-size: 2rem;
+		font-weight: 700;
+		letter-spacing: 0.05em;
+		text-align: center;
+		margin-bottom: 33px;
 	}
 
 	&__button {
-		margin: 0 auto 50px;
+		margin: 0 auto 40px;
+	}
+
+	&__sectionWatermark {
+		text-align: left;
+		color: #fff;
+		opacity: 0.1;
 	}
 }

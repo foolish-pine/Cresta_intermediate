@@ -1,0 +1,91 @@
+/* ================================================================
+  Contact Page
+   ================================================================ */
+
+.p-contactPage {
+	
+	&__inner {
+		width: 100%;
+		max-width: $max-width-inner-sp;
+		margin: 0 auto;
+		
+		@include mq(pc) {
+			max-width: 700px;
+		}
+	}
+	
+	&__mainVisual {
+		padding: 175px 0 50px;
+		background-image: url(../../../image/contact-page-bgi@2x.jpg);
+		background-position: center;
+		background-size: cover;
+		margin: 0 calc(50% - 50vw) 30px;
+		width: 100vw;
+
+	}
+
+	&__sectionTitle {
+		color: #fff;
+		justify-content: center;
+		margin-bottom: 40px;
+
+		&::after {
+			display: none;
+		}
+	}
+
+	&__button {
+		margin: 0 auto 80px;
+	}
+
+	&__sectionWatermark {
+		text-align: left;
+		color: #fff;
+		opacity: 0.1;
+	}
+
+	&__form {
+		padding: 67px 0 0;
+	}
+
+	&__purpose {
+		margin-bottom: 18px;
+
+		p {
+			margin-bottom: -14px;
+		}
+		
+		label {
+			line-height: 1.7;
+			font-size: 1.6rem;
+			font-weight: 400;
+			letter-spacing: 0.05em;
+			color: $color-text;
+		}
+
+	}
+
+	&__textbox {
+		margin-bottom: 22px;
+		width: 100%;
+		line-height: 1.8;
+		border: solid 1px $color-form-border;
+	}
+
+	&__textarea {
+		margin-bottom: 75px;
+
+		textarea {
+			width: 100%;
+			line-height: 1.8;
+			height: 171px;
+			line-height: 1.5;
+			border: solid 1px $color-form-border;
+		}
+	}
+
+	&__button {
+		width: 245px;
+	}
+
+}
