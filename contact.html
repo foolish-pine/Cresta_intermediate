@@ -32,7 +32,7 @@ function escape($str) {
     <div class="p-header">
       <div class="p-header__inner">
         <div class="p-header__logo">
-          <a href="#">
+          <a href="index.html">
             <h1>Cresta Design</h1>
           </a>
         </div>
@@ -55,13 +55,46 @@ function escape($str) {
   <main class="l-main">
     <section id="contactPage" class="p-contactPage">
       <div class="p-contactPage__inner">
-        <h2 class="p-contactPage__sectionTitle c-text__sectionTitle">Contact</h2>
-        <!-- <div class="p-contact__button c-button">
-          <a href="contact.html">Contact</a>
-        </div> -->
-        <p class="p-contact__sectionWatermark c-text__sectionWatermark">Contact us</p>
+        <div class="p-contactPage__mainVisual">
+          <h2 class="p-contactPage__sectionTitle c-text__sectionTitle">Contact</h2>
+          <!-- <div class="p-contact__button c-button">
+            <a href="contact.html">Contact</a>
+          </div> -->
+          <p class="p-contact__sectionWatermark c-text__sectionWatermark">Contact us</p>
+        </div>
+        <form class="p-contactPage__form" action="" method="post">
+          <div class="p-contactPage__purpose">
+            <p>お問い合わせ内容</p><br>
+            <label for="request"><input type="checkbox" id="request" name="porpose"> 資料請求</label>
+            <br>
+            <label for="consult"><input type="checkbox" id="consult" name="porpose"> お電話でのご相談を希望</label>
+            <br>
+            <label for="apply"><input type="checkbox" id="apply" name="porpose"> 申し込み</label>
+            <br>
+          </div>
+          <div>
+            <label for="name">担当者名</label><br>
+            <input class="p-contactPage__textbox" type="text" id="name" name="name" required />
+          </div>
+          <div>
+            <label for="tel">電話番号</label><br>
+            <input class="p-contactPage__textbox" type="text" id="tel" name="tel" required />
+          </div>
+          <div>
+            <label for="email">メールアドレス</label><br>
+            <input class="p-contactPage__textbox" type="text" id="email" name="email" required />
+          </div>
+          <div class="p-contactPage__textarea">
+            <label for="message">その他</label><br>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <input type="hidden" id="token" name="token" value="1234567" />
+          <div class="p-contactPage__button c-button">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
       </div>
-    </section> 
+    </section>
   </main>
   <footer class="l-footer">
     <div class="p-footer">

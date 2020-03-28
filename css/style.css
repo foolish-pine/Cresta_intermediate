@@ -336,6 +336,7 @@ img {
 }
 
 .c-button input {
+  line-height: 60px;
   width: 100%;
   border: none;
   border-radius: 51px;
@@ -954,13 +955,6 @@ img {
 /* ================================================================
   Contact Page
    ================================================================ */
-.p-contactPage {
-  padding: 184px 0 40px;
-  background-image: url(../../../image/contact-page-bgi@2x.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
 .p-contactPage__inner {
   width: 100%;
   max-width: calc((345/375) * 100%);
@@ -971,6 +965,15 @@ img {
   .p-contactPage__inner {
     max-width: 700px;
   }
+}
+
+.p-contactPage__mainVisual {
+  padding: 175px 0 50px;
+  background-image: url(../../../image/contact-page-bgi@2x.jpg);
+  background-position: center;
+  background-size: cover;
+  margin: 0 calc(50% - 50vw) 30px;
+  width: 100vw;
 }
 
 .p-contactPage__sectionTitle {
@@ -986,13 +989,56 @@ img {
 }
 
 .p-contactPage__button {
-  margin: 0 auto 40px;
+  margin: 0 auto 80px;
 }
 
 .p-contactPage__sectionWatermark {
   text-align: left;
   color: #fff;
   opacity: 0.1;
+}
+
+.p-contactPage__form {
+  padding: 67px 0 0;
+}
+
+.p-contactPage__purpose {
+  margin-bottom: 18px;
+}
+
+.p-contactPage__purpose p {
+  margin-bottom: -14px;
+}
+
+.p-contactPage__purpose label {
+  line-height: 1.7;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #171717;
+}
+
+.p-contactPage__textbox {
+  margin-bottom: 22px;
+  width: 100%;
+  line-height: 1.8;
+  border: solid 1px #141414;
+}
+
+.p-contactPage__textarea {
+  margin-bottom: 75px;
+}
+
+.p-contactPage__textarea textarea {
+  width: 100%;
+  line-height: 1.8;
+  height: 171px;
+  line-height: 1.5;
+  border: solid 1px #141414;
+}
+
+.p-contactPage__button {
+  width: 245px;
 }
 
 /* ================================================================
