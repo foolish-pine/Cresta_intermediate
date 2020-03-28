@@ -4,10 +4,14 @@
 
 .p-works {
 	margin-top: -86px;
-	padding: 186px 0 50px;
-	background-image: url(../../../image/works-bgi@2x.jpg);
-	background-position: center;
-	background-size: cover;
+	padding-top: 86px;
+	
+	&__bg {
+		padding: 100px 0 45px;
+		background-image: url(../../../image/works-bgi@2x.jpg);
+		background-position: center;
+		background-size: cover;
+	}
 
 	&__inner {
 		max-width: $max-width-inner-sp;
@@ -20,16 +24,15 @@
 
 	&__sectionTitle {
 		color: #fff;
-		text-align: right;
-		justify-content: flex-end;
+		justify-content: center;
 
 		&::after {
-			background-color: #fff;
+			display: none;
 		}
 	}
 
 	&__container {
-		margin: 0 auto 80px;
+		margin: 0 auto 50px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;

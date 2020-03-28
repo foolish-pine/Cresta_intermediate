@@ -1,10 +1,10 @@
 /* ================================================================
-  Contact
+  Contact Page
    ================================================================ */
 
-.p-contact {
-	padding: 100px 0 45px;
-	background-image: url(../../../image/contact-bgi@2x.jpg);
+.p-contactPage {
+	padding: 184px 0 40px;
+	background-image: url(../../../image/contact-page-bgi@2x.jpg);
 	background-position: center;
 	background-size: cover;
 
@@ -20,21 +20,12 @@
 
 	&__sectionTitle {
 		color: #fff;
-		justify-content: flex-end;
-		margin-bottom: 82px;
+		justify-content: center;
+		margin-bottom: 40px;
 
 		&::after {
-			background-color: #fff;
+			display: none;
 		}
-	}
-
-	&__text {
-		color: #fff;
-		font-size: 2rem;
-		font-weight: 700;
-		letter-spacing: 0.05em;
-		text-align: center;
-		margin-bottom: 33px;
 	}
 
 	&__button {

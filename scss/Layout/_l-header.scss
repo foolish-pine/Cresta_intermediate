@@ -6,4 +6,18 @@
 	position: fixed;
   width: 100%;
   z-index: 100;
+
+	&--clone { //スティッキーヘッダー用のスタイル
+		width: 100%;
+		max-width: $max-width;
+		position: fixed;
+		background-color: $color-header-bg;
+		top: -86px;
+    z-index: 101;
+    transition: .25s;
+    
+    &.visible {
+      top: 0;
+    }
+  }
 }

@@ -267,6 +267,21 @@ img {
   z-index: 100;
 }
 
+.l-header--clone {
+  width: 100%;
+  max-width: 1440px;
+  position: fixed;
+  background-color: #282F35;
+  top: -86px;
+  z-index: 101;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+.l-header--clone.visible {
+  top: 0;
+}
+
 /* ================================================================
   メインレイアウト
    ================================================================ */
@@ -274,7 +289,6 @@ img {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding-top: 60px;
 }
 
 /* ================================================================
@@ -304,6 +318,8 @@ img {
 }
 
 .c-button a {
+  display: block;
+  border-radius: 51px;
   line-height: 60px;
   color: #171717;
   font-weight: 700;
@@ -330,18 +346,18 @@ img {
    =================================================================== */
 .c-text {
   line-height: calc(30/16);
-  color: #282F35;
+  color: #171717;
   font-weight: 700;
   font-size: 1.6rem;
   letter-spacing: .05em;
 }
 
 .c-text__sectionTitle {
-  color: #171717;
+  color: #282F35;
   font-weight: 700;
   font-size: 3rem;
   font-style: italic;
-  letter-spacing: .05em;
+  letter-spacing: .1em;
   margin-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -353,17 +369,16 @@ img {
 
 .c-text__sectionTitle::after {
   content: "";
-  width: 90px;
+  width: 100px;
   height: 5px;
-  margin-left: 30px;
+  margin-left: 28px;
   background-color: #282F35;
 }
 
 .c-text__sectionSubTitle {
   line-height: 1.5;
-  margin-bottom: 30px;
+  margin-bottom: 23px;
   color: #171717;
-  font-weight: 700;
   font-size: 2rem;
   letter-spacing: .05em;
   text-align: center;
@@ -379,8 +394,7 @@ img {
 .c-text__sectionWatermark {
   font-size: 4rem;
   letter-spacing: .05em;
-  font-weight: 700;
-  color: #282F35;
+  color: #171717;
   opacity: .05;
 }
 
@@ -398,32 +412,15 @@ img {
 .c-card__text {
   width: 100%;
   max-width: 320px;
-  line-height: calc(25/13);
-  padding: 25px 20px;
+  line-height: calc(30/16);
+  padding: 20px 20px 24px;
   -webkit-box-shadow: 0 0 6px black;
           box-shadow: 0 0 6px black;
-  color: #282F35;
-  font-family: 'Hiragino Kaku Gothic ProN';
-  font-size: 1.3rem;
-  letter-spacing: .05em;
+  color: #171717;
   background-color: #fff;
-}
-
-/* ===================================================================
-  アラートコンポーネント
-   =================================================================== */
-.c-alert {
-  width: 100%;
-  line-height: 2;
-  color: white;
-}
-
-.c-alert--error {
-  background-color: #f44336;
-}
-
-.c-alert--success {
-  background-color: #4CAF50;
+  font-weight: 400;
+  font-size: 1.6rem;
+  letter-spacing: .05em;
 }
 
 /* ===============================================================
@@ -433,12 +430,15 @@ img {
 /* ================================================================
   ヘッダー
    ================================================================ */
+.visible {
+  top: 0;
+}
+
 .p-header {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   padding: 30px 0 20px;
-  background-color: #282F35;
 }
 
 .p-header__inner {
@@ -474,9 +474,9 @@ img {
 .p-header__nav {
   display: none;
   position: absolute;
-  top: 0;
+  top: -30px;
   left: calc((30/375) * -100%);
-  z-index: 100;
+  z-index: 101;
   width: 100vw;
   background-color: #282F35;
 }
@@ -634,7 +634,7 @@ img {
   right: 0;
   bottom: 0;
   left: 0;
-  width: calc((300/375) * 100%);
+  width: 100%;
   height: 194px;
   margin: auto;
   -webkit-transform: top -50% left -50%;
@@ -649,18 +649,18 @@ img {
 }
 
 .p-mainVisual__catch p:first-child {
+  margin-bottom: 48px;
   color: #fff;
   font-weight: 700;
   font-size: 3.7rem;
   text-align: center;
   letter-spacing: .05em;
-  margin-bottom: 53px;
 }
 
 @media print, screen and (min-width: 768px) {
   .p-mainVisual__catch p:first-child {
-    font-size: 5rem;
     line-height: 136px;
+    font-size: 5rem;
   }
 }
 
@@ -675,8 +675,8 @@ img {
 
 @media print, screen and (min-width: 768px) {
   .p-mainVisual__catch p:nth-child(2) {
-    font-size: 5rem;
     line-height: 136px;
+    font-size: 5rem;
   }
 }
 
@@ -722,7 +722,11 @@ img {
    ================================================================ */
 .p-works {
   margin-top: -86px;
-  padding: 186px 0 50px;
+  padding-top: 86px;
+}
+
+.p-works__bg {
+  padding: 100px 0 45px;
   background-image: url(../../../image/works-bgi@2x.jpg);
   background-position: center;
   background-size: cover;
@@ -741,18 +745,17 @@ img {
 
 .p-works__sectionTitle {
   color: #fff;
-  text-align: right;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .p-works__sectionTitle::after {
-  background-color: #fff;
+  display: none;
 }
 
 .p-works__container {
-  margin: 0 auto 80px;
+  margin: 0 auto 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -784,7 +787,7 @@ img {
    ================================================================ */
 .p-service {
   margin-top: -86px;
-  padding: 186px 0 60px;
+  padding: 186px 0 58px;
 }
 
 .p-service__inner {
@@ -811,11 +814,12 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .p-service__image--hover {
   position: absolute;
-  z-index: 100;
+  z-index: 10;
   width: 100%;
   height: 100%;
   -webkit-transition: all .4s;
@@ -842,7 +846,7 @@ img {
 
 .p-service__contentName {
   position: absolute;
-  z-index: 101;
+  z-index: 11;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -898,7 +902,7 @@ img {
   Contact
    ================================================================ */
 .p-contact {
-  padding: 100px 0 40px;
+  padding: 100px 0 45px;
   background-image: url(../../../image/contact-bgi@2x.jpg);
   background-position: center;
   background-size: cover;
@@ -921,7 +925,7 @@ img {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-bottom: 80px;
+  margin-bottom: 82px;
 }
 
 .p-contact__sectionTitle::after {
@@ -934,7 +938,7 @@ img {
   font-weight: 700;
   letter-spacing: 0.05em;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
 }
 
 .p-contact__button {
@@ -942,6 +946,50 @@ img {
 }
 
 .p-contact__sectionWatermark {
+  text-align: left;
+  color: #fff;
+  opacity: 0.1;
+}
+
+/* ================================================================
+  Contact Page
+   ================================================================ */
+.p-contactPage {
+  padding: 184px 0 40px;
+  background-image: url(../../../image/contact-page-bgi@2x.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.p-contactPage__inner {
+  width: 100%;
+  max-width: calc((345/375) * 100%);
+  margin: 0 auto;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-contactPage__inner {
+    max-width: 700px;
+  }
+}
+
+.p-contactPage__sectionTitle {
+  color: #fff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 40px;
+}
+
+.p-contactPage__sectionTitle::after {
+  display: none;
+}
+
+.p-contactPage__button {
+  margin: 0 auto 40px;
+}
+
+.p-contactPage__sectionWatermark {
   text-align: left;
   color: #fff;
   opacity: 0.1;
@@ -970,7 +1018,7 @@ img {
 
 .p-footer p {
   line-height: 80px;
-  color: #282F35;
+  color: #171717;
   font-weight: 700;
   font-size: 1.4rem;
   text-align: center;
