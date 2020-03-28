@@ -1,10 +1,10 @@
 /* ================================================================
-  About
+  Concept
    ================================================================ */
 
-.p-about {
-	margin-top: -75px;
-	padding-top: 175px;
+.p-concept {
+	margin-top: -86px;
+	padding: 186px 0 40px;
 
 	&__inner {
 		max-width: $max-width-inner-sp;
@@ -13,5 +13,23 @@
 		@include mq(pc) {
 			max-width: $max-width-inner-pc;
 		}
+	}
+
+	&__text {
+		margin-bottom: 50px;
+	}
+
+	&__image {
+		margin-bottom: 40px;
+
+		img {
+			width: 100%;
+			display: block;
+			margin: 0;
+		}
+	}
+
+	&__sectionWatermark {
+		text-align: right;
 	}
 }

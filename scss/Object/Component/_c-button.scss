@@ -5,18 +5,22 @@
 .c-button {
 	width: 235px;
 	height: 60px;
-	line-height: 60px;
 	border-radius: 51px;
-	box-shadow: 0 0 6px $color-button-bg;
-	color: #fff;
+	box-shadow: 0 0 6px $color-button-shadow;
 	background-color: $color-button-bg;
-	font-size: 2rem;
 	text-align: center;
-	letter-spacing: .05em;
 	transition: all .4s;
 
+	a {
+		line-height: 60px;
+		color: $color-button-text;
+		font-weight: 700;
+		font-size: 1.6rem;
+		text-decoration: none;
+		letter-spacing: .05em;
+	}
+
 	&:hover {
-		color: $color-button-text-hover;
 		background-color: #fff;
 		font-weight: 700;
 		transition: all .4s;
@@ -24,7 +28,7 @@
 
 	input {
 		width: 100%;
-		border-radius: 51px;
 		border: none;
+		border-radius: 51px;
 	}
 }
