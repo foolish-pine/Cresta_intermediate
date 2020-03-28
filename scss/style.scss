@@ -18,7 +18,7 @@
 // 複数単語になる場合はキャメルケースを使用します。
 // 例: p-header__onlineStore など
 // 
-// レイアウトの都合上複数のelementを内包する用途のコンテナ要素には
+// レイアウトの都合で複数のelementを内包する用途のコンテナ要素には
 // 内包するelementをハイフンでつなげたクラス名をつけます。
 // 例: p-footer__logo-address-tel など
 // 
@@ -76,7 +76,8 @@
 @import 
 'Object/Project/p-header',
 'Object/Project/p-mainVisual',
-'Object/Project/p-about',
+'Object/Project/p-concept',
+'Object/Project/p-works',
 'Object/Project/p-service',
 'Object/Project/p-news',
 'Object/Project/p-contact',

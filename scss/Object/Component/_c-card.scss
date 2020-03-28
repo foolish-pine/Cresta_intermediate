@@ -15,11 +15,12 @@
 		width: 100%;
 		max-width: 320px;
 		line-height: calc(25/13);
-		padding: 19px 33px 29px;
-		box-shadow: 0 0 6px rgba(0, 0, 0, .16);
+		padding: 25px 20px;
+		box-shadow: 0 0 6px rgba(0, 0, 0, 1);
 		color: $color-text;
 		font-family: 'Hiragino Kaku Gothic ProN';
 		font-size: 1.3rem;
 		letter-spacing: .05em;
+		background-color: #fff;
 	}
 }
