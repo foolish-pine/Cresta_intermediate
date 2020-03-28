@@ -1,0 +1,864 @@
+@charset "UTF-8";
+/*! ===============================================================
+※※※※※※※※※※※※※※※※※※※※※※※※※※※※
+このCSSファイルはSassから生成されています！
+編集しないようご注意ください。
+※※※※※※※※※※※※※※※※※※※※※※※※※※※※
+================================================================ */
+/* ===============================================================
+  Foundation
+  基本的なスタイルの定義
+================================================================ */
+/* ================================================================
+  リセットCSS
+   ================================================================ */
+/*!
+ * ress.css • v2.0.4
+ * MIT License
+ * github.com/filipelinhares/ress
+ */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  word-break: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
+}
+
+*, :after, :before {
+  background-repeat: no-repeat;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+:after, :before {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+hr {
+  overflow: visible;
+  height: 0;
+}
+
+details, main {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+small {
+  font-size: 80%;
+}
+
+[hidden] {
+  display: none;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:active, a:hover {
+  outline-width: 0;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace,monospace;
+}
+
+pre {
+  font-size: 1em;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+input {
+  border-radius: 0;
+}
+
+[disabled] {
+  cursor: default;
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+button, input, optgroup, select, textarea {
+  font: inherit;
+}
+
+optgroup {
+  font-weight: 700;
+}
+
+button {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+[role=button], [type=button], [type=reset], [type=submit], button {
+  cursor: pointer;
+  color: inherit;
+}
+
+[type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner, button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+[type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner, button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+[type=reset], [type=submit], button, html [type=button] {
+  -webkit-appearance: button;
+}
+
+button, input, select, textarea {
+  background-color: transparent;
+  border-style: none;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select::-ms-value {
+  color: currentColor;
+}
+
+legend {
+  border: 0;
+  color: inherit;
+  display: table;
+  white-space: normal;
+  max-width: 100%;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  color: inherit;
+  font: inherit;
+}
+
+img {
+  border-style: none;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+svg:not([fill]) {
+  fill: currentColor;
+}
+
+@media screen {
+  [hidden~=screen] {
+    display: inherit;
+  }
+  [hidden~=screen]:not(:active):not(:focus):not(:target) {
+    position: absolute !important;
+    clip: rect(0 0 0 0) !important;
+  }
+}
+
+[aria-busy=true] {
+  cursor: progress;
+}
+
+[aria-controls] {
+  cursor: pointer;
+}
+
+[aria-disabled] {
+  cursor: default;
+}
+
+/* ================================================================
+  ベース
+   ================================================================ */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', 'Noto Sans JP', "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 1.6rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ================================================================
+  メディアクエリ
+   ================================================================ */
+/* ================================================================
+  変数の定義
+   ================================================================ */
+/* ===============================================================
+  Layout
+  レイアウト
+================================================================ */
+/* ================================================================
+  ヘッダーレイアウト
+   ================================================================ */
+.l-header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+/* ================================================================
+  メインレイアウト
+   ================================================================ */
+.l-main {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 75px;
+}
+
+/* ================================================================
+  フッターレイアウト
+   ================================================================ */
+.l-footer {
+  width: 100%;
+}
+
+/* ===============================================================
+  Component
+  コンポーネント
+================================================================ */
+/* ===================================================================
+  ボタンコンポーネント
+   =================================================================== */
+.c-button {
+  width: 235px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 51px;
+  -webkit-box-shadow: 0 0 6px #1B1310;
+          box-shadow: 0 0 6px #1B1310;
+  color: #fff;
+  background-color: #1B1310;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: .05em;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.c-button:hover {
+  color: #1B1310;
+  background-color: #fff;
+  font-weight: 700;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.c-button input {
+  width: 100%;
+  border-radius: 51px;
+  border: none;
+}
+
+/* ===================================================================
+  テキストコンポーネント
+   =================================================================== */
+.c-text {
+  line-height: calc(30/14);
+  color: #141414;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: .05em;
+}
+
+.c-text__sectionTitle {
+  margin-bottom: 70px;
+  color: #141414;
+  font-weight: 500;
+  font-size: 3.6rem;
+  text-align: center;
+  letter-spacing: .05em;
+}
+
+.c-text__sectionSubTitle {
+  line-height: 2;
+  margin-bottom: 20px;
+  color: #141414;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: .1em;
+}
+
+@media print, screen and (min-width: 768px) {
+  .c-text__sectionSubTitle {
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+  }
+}
+
+/* ===================================================================
+  カードコンポーネント
+   =================================================================== */
+.c-card {
+  width: 320px;
+}
+
+.c-card__image img {
+  display: block;
+}
+
+.c-card__text {
+  width: 100%;
+  max-width: 320px;
+  line-height: calc(25/13);
+  padding: 19px 33px 29px;
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.16);
+  color: #141414;
+  font-family: 'Hiragino Kaku Gothic ProN';
+  font-size: 1.3rem;
+  letter-spacing: .05em;
+}
+
+/* ===================================================================
+  アラートコンポーネント
+   =================================================================== */
+.c-alert {
+  width: 100%;
+  line-height: 2;
+  color: white;
+}
+
+.c-alert--error {
+  background-color: #f44336;
+}
+
+.c-alert--success {
+  background-color: #4CAF50;
+}
+
+/* ===============================================================
+  Project
+  プロジェクト
+================================================================ */
+/* ================================================================
+  ヘッダー
+   ================================================================ */
+.p-header {
+  width: 100%;
+  max-width: 1440px;
+  height: 75px;
+  margin: 0 auto;
+  border-bottom: solid 1px #f5f5f5;
+  background: #1B1310;
+}
+
+.p-header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  max-width: calc((345/375) * 100%);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-header__inner {
+    max-width: calc((1200/1440) * 100%);
+  }
+}
+
+.p-header__logo {
+  margin-top: 20px;
+}
+
+.p-header__logo a {
+  text-decoration: none;
+}
+
+.p-header__logo h1 {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 2.6rem;
+  letter-spacing: 0;
+}
+
+.p-header__nav {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: calc((30/375) * -100%);
+  z-index: 100;
+  width: 100vw;
+  background-color: #1B1310;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-header__nav {
+    display: block;
+    position: static;
+    width: auto;
+    margin-top: 30px;
+    background-color: transparent;
+  }
+}
+
+.p-header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  overflow: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-header__list {
+    height: auto;
+    -webkit-box-orient: unset;
+    -webkit-box-direction: unset;
+        -ms-flex-direction: unset;
+            flex-direction: unset;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+  }
+}
+
+.p-header__item {
+  margin-bottom: 50px;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-header__item {
+    margin-left: 30px;
+  }
+}
+
+.p-header__item:hover {
+  border-bottom: 2px solid #fff;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.p-header__item a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-decoration: none;
+  letter-spacing: 0;
+}
+
+.p-header__menu {
+  position: relative;
+  z-index: 101;
+  width: 25px;
+  height: 16px;
+  margin-top: 29px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-header__menu {
+    display: none;
+  }
+}
+
+.p-header__menuLine {
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.p-header__menuLine:first-child {
+  top: 0;
+}
+
+.p-header__menuLine:first-child.active {
+  top: 8px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.p-header__menuLine:nth-child(2) {
+  top: 8px;
+}
+
+.p-header__menuLine:nth-child(2).active {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.p-header__menuLine:last-child {
+  top: 16px;
+}
+
+.p-header__menuLine:last-child.active {
+  top: 8px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+/* ================================================================
+  メインビジュアル
+   ================================================================ */
+.p-mainVisual {
+  position: relative;
+  height: 590px;
+  background-image: url(../image/fv-bgi_sp@2x.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-mainVisual {
+    max-width: 1440px;
+    height: 740px;
+    margin: 0 auto;
+    background-image: url(../image/fv-bgi@2x.jpg);
+    background-position: center bottom;
+  }
+}
+
+.p-mainVisual__catch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: calc((300/375) * 100%);
+  height: 100px;
+  margin: auto;
+  border: solid 2px #fff;
+  -webkit-transform: top -50% left -50%;
+          transform: top -50% left -50%;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-mainVisual__catch {
+    max-width: 449px;
+    height: 136px;
+  }
+}
+
+.p-mainVisual__catch p {
+  line-height: 100px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: .05em;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-mainVisual__catch p {
+    font-size: 5rem;
+    line-height: 136px;
+  }
+}
+
+/* ================================================================
+  About
+   ================================================================ */
+.p-about {
+  margin-top: -75px;
+  padding-top: 175px;
+}
+
+.p-about__inner {
+  max-width: calc((345/375) * 100%);
+  margin: 0 auto;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-about__inner {
+    max-width: calc((1030/1440) * 100%);
+  }
+}
+
+/* ================================================================
+  Service
+   ================================================================ */
+.p-service {
+  padding-top: 160px;
+}
+
+.p-service__inner {
+  width: 100%;
+  max-width: calc((345/375) * 100%);
+  margin: 0 auto;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-service__inner {
+    max-width: calc((1030/1440) * 100%);
+  }
+}
+
+.p-service__subTitle {
+  margin-bottom: 20px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-service__subTitle {
+    margin-bottom: 28px;
+  }
+}
+
+.p-service__text {
+  margin-bottom: 35px;
+}
+
+.p-service__container {
+  margin-bottom: 40px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-service__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 25px;
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-service__container:nth-child(2) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: row-reverse;
+            flex-flow: row-reverse;
+  }
+}
+
+.p-service__container img {
+  width: 100%;
+  height: auto;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-service__textContainer {
+    width: calc((480/1030) * 100%);
+    padding-top: 15px;
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-service__image {
+    width: calc((480/1030) * 100%);
+  }
+}
+
+/* ================================================================
+  News
+   ================================================================ */
+.p-news {
+  padding-top: 106px;
+}
+
+.p-news__inner {
+  width: 100%;
+  max-width: calc((345/375) * 100%);
+  margin: 0 auto;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-news__inner {
+    max-width: calc((1030/1440) * 100%);
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-news__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.p-news__card {
+  margin: 0 auto 50px;
+}
+
+/* ================================================================
+  Contact
+   ================================================================ */
+.p-contact {
+  padding-top: 97px;
+}
+
+.p-contact__inner {
+  width: 100%;
+  max-width: calc((345/375) * 100%);
+  margin: 0 auto;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-contact__inner {
+    max-width: 700px;
+  }
+}
+
+.p-contact__sectionTitle {
+  line-height: 2;
+  margin-bottom: 60px;
+  font-weight: bold;
+  font-size: 2.4rem;
+  letter-spacing: .1;
+}
+
+.p-contact__textbox {
+  width: 100%;
+  line-height: 1.8;
+  margin-bottom: 22px;
+  border: solid 1px #141414;
+}
+
+.p-contact form label {
+  font-family: 'Hiragino Kaku Gothic ProN';
+}
+
+.p-contact__messageArea {
+  margin-bottom: 27px;
+}
+
+.p-contact__messageArea textarea {
+  width: 100%;
+  line-height: 1.8;
+  height: 171px;
+  line-height: 1.5;
+  border: solid 1px #141414;
+}
+
+.p-contact__button {
+  margin: 0 auto 50px;
+}
+
+/* ================================================================
+  フッター
+   ================================================================ */
+.p-footer {
+  width: 100%;
+  max-width: 1440px;
+  height: 60px;
+  margin: 0 auto;
+  background-color: #1B1310;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-footer {
+    height: 80px;
+  }
+}
+
+.p-footer__inner {
+  max-width: calc((345/375) * 100%);
+  margin: 0 auto;
+}
+
+.p-footer p {
+  line-height: 60px;
+  color: #fff;
+  font-weight: regular;
+  font-size: 1.4rem;
+  text-align: center;
+  letter-spacing: .05em;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-footer p {
+    line-height: 80px;
+  }
+}

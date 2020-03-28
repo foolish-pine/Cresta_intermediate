@@ -1,0 +1,147 @@
+/* ================================================================
+  ヘッダー
+   ================================================================ */
+
+.p-header {
+	width: 100%;
+	max-width: $max-width;
+	height: 75px;
+	margin: 0 auto;
+	border-bottom: solid 1px $color-header-border;
+	background: $color-header-bg;
+
+	&__inner {
+		display: flex;
+		position: relative;
+		max-width: $max-width-inner-sp;
+		justify-content: space-between;
+		margin: 0 auto;
+
+		@include mq(pc) {
+			max-width: $max-width-header-inner-pc;
+		}
+	}
+
+	&__logo {
+		margin-top: 20px;
+
+		a {
+			text-decoration: none;
+		}
+
+		h1 {
+			color: #fff;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 500;
+			font-size: 2.6rem;
+			letter-spacing: 0;
+		}
+	}
+
+	&__nav {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: calc((30/375) * -100%);
+		z-index: 100;
+		width: 100vw;
+		background-color: $color-header-bg;
+
+		@include mq(pc) {
+			display: block;
+			position: static;
+			width: auto;
+			margin-top: 30px;
+			background-color: transparent;
+		}
+	}
+
+	&__list {
+		display: flex;
+		height: 100vh;
+		overflow: auto;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		list-style: none;
+
+		@include mq(pc) {
+			height: auto;
+			flex-direction: unset;
+			align-items: unset;
+		}
+
+		-webkit-overflow-scrolling: touch;
+	}
+
+	&__item {
+		margin-bottom: 50px;
+		padding-bottom: 3px;
+		border-bottom: 2px solid transparent;
+		transition: all .4s;
+
+		@include mq(pc) {
+			margin-left: 30px;
+		}
+
+		&:hover {
+			border-bottom: 2px solid #fff;
+			transition: all .4s;
+		}
+
+		a {
+			color: #fff;
+			font-weight: 500;
+			font-size: 1.6rem;
+			text-decoration: none;
+			letter-spacing: 0;
+		}
+	}
+
+	&__menu {
+		position: relative;
+		z-index: 101;
+		width: 25px;
+		height: 16px;
+		margin-top: 29px;
+
+		@include mq(pc) {
+			display: none;
+		}
+	}
+
+	&__menuLine {
+		position: absolute;
+		width: 25px;
+		height: 2px;
+		background-color: #fff;
+		transition: transform .3s;
+
+
+		&:first-child {
+			top: 0;
+
+			&.active {
+				top: 8px;
+				transform: rotate(45deg);
+			}
+		}
+
+		&:nth-child(2) {
+			top: 8px;
+
+			&.active {
+				transform: scaleX(0);
+			}
+		}
+
+		&:last-child {
+			top: 16px;
+
+			&.active {
+				top: 8px;
+				transform: rotate(135deg);
+			}
+		}
+	}
+}
