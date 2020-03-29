@@ -10,7 +10,6 @@
 	&--clone { //スティッキーヘッダー用のスタイル
     width: 100%;
 		position: fixed;
-		background-color: $color-header-bg;
 		top: -86px;
     z-index: 101;
     transition: .25s;
@@ -21,6 +20,10 @@
     
     &.visible {
       top: 0;
+    }
+
+    &>.p-header {
+		background-color: $color-header-bg;
     }
   }
 }

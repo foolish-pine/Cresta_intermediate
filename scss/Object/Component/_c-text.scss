@@ -19,26 +19,39 @@
 		display: flex;
 		align-items: center;
 
+		@include mq(pc) {
+			font-size: 6rem;
+		margin-bottom: 70px;
+
+		}
+
 		&::after {
 			content: "";
 			width: 100px;
 			height: 5px;
 			margin-left: 28px;
 			background-color: $color-text-sectionBorder;
+
+			@include mq(pc) {
+				width: 200px;
+			}
 		}
 	}
 
 	&__sectionSubTitle {
 		line-height: 1.5;
 		margin-bottom: 23px;
+		font-weight: 700;
 		color: $color-text-sectionSubTitle;
 		font-size: 2rem;
 		letter-spacing: .05em;
 		text-align: center;
 
 		@include mq(pc) {
-			font-size: 2.4rem;
-			margin-bottom: 30px;
+			font-size: 3rem;
+			margin-bottom: 60px;
+			line-height: calc(50/30);
+			font-weight: 700;
 		}
 	}
 
@@ -47,5 +60,9 @@
 		letter-spacing: .05em;
 		color: $color-text;
 		opacity: .05;
+
+		@include mq(pc) {
+			font-size: 9rem;
+		}
 	}
 }

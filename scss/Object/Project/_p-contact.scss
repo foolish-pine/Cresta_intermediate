@@ -8,13 +8,17 @@
 	background-position: center;
 	background-size: cover;
 
+	@include mq(pc) {
+		padding: 100px 0 70px;
+	}
+
 	&__inner {
 		width: 100%;
 		max-width: $max-width-inner-sp;
 		margin: 0 auto;
 
 		@include mq(pc) {
-			max-width: 700px;
+		max-width: $max-width-inner-pc-lg;
 		}
 	}
 
@@ -39,6 +43,10 @@
 
 	&__button {
 		margin: 0 auto 40px;
+
+		@include mq(pc) {
+			margin: 0 auto 70px;
+		}
 	}
 
 	&__sectionWatermark {

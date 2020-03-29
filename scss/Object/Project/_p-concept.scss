@@ -6,10 +6,24 @@
 	margin-top: -86px;
 	padding: 186px 0 40px;
 
-	&__inner {
+	@include mq(pc) {
+	margin-top: -97px;
+	padding: 197px 0 70px;
+		
+	}
+
+	&__inner--lg {
 		max-width: $max-width-inner-sp;
 		margin: 0 auto;
 		
+		@include mq(pc) {
+			max-width: $max-width-inner-pc-lg;
+		}
+	}
+
+	&__inner {
+		margin: 0 auto;
+
 		@include mq(pc) {
 			max-width: $max-width-inner-pc;
 		}
@@ -17,15 +31,33 @@
 
 	&__text {
 		margin-bottom: 50px;
+
+		@include mq(pc) {
+			width: calc((440/1000) * 100%);
+		}
 	}
 
 	&__image {
 		margin-bottom: 40px;
 
+		@include mq(pc) {
+			width: calc((440/1000) * 100%);
+		margin-bottom: 0px;
+
+		}
+
 		img {
 			width: 100%;
 			display: block;
 			margin: 0;
+		}
+	}
+
+	&__container {
+		@include mq(pc) {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 70px;
 		}
 	}
 

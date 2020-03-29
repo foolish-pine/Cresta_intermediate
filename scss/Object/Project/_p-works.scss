@@ -3,22 +3,34 @@
    ================================================================ */
 
 .p-works {
-	margin-top: -86px;
-	padding-top: 86px;
+	margin-top: -97px;
+	padding-top: 97px;
 	
 	&__bg {
 		padding: 100px 0 45px;
 		background-image: url(../../../image/works-bgi@2x.jpg);
 		background-position: center;
 		background-size: cover;
+
+		@include mq(pc) {
+			padding: 100px 0 70px;
+		}
 	}
 
-	&__inner {
+	&__inner--lg {
 		max-width: $max-width-inner-sp;
 		margin: 0 auto;
 		
 		@include mq(pc) {
-			max-width: $max-width-inner-pc;
+			max-width: $max-width-inner-pc-lg;
+		}
+	}
+
+	&__inner {
+		margin: 0 auto;
+
+		@include mq(pc) {
+			max-width: $max-width-inner-pc
 		}
 	}
 
@@ -26,8 +38,17 @@
 		color: #fff;
 		justify-content: center;
 
+		@include mq(pc) {
+			justify-content: flex-end;
+		}
+
 		&::after {
 			display: none;
+
+			@include mq(pc) {
+				display: block;
+				background-color: #fff;
+			}
 		}
 	}
 
@@ -36,6 +57,12 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
+		@include mq(pc) {
+			margin-bottom: 80px;
+			flex-direction: row;
+			justify-content: space-between;
+		}
 	}
 
 	&__card {
@@ -44,6 +71,10 @@
 
 	&__button {
 		margin: 0 auto 40px;
+
+		@include mq(pc) {
+			margin-bottom: 70px;
+		}
 	}
 
 	&__sectionWatermark {
