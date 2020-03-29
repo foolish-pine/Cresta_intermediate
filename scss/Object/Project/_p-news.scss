@@ -15,9 +15,7 @@
 		}
 	}
 
-
 	&__container {
-
 		@include mq(pc) {
 			display: flex;
 			flex-wrap: wrap;

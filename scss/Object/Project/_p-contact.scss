@@ -3,10 +3,15 @@
    ================================================================ */
 
 .p-contact {
-	padding: 100px 0 45px;
+	margin-top: -76px;
+	padding: 176px 0 45px;
 	background-image: url(../../../image/contact-bgi@2x.jpg);
 	background-position: center;
 	background-size: cover;
+
+	@include mq(pc) {
+		padding: 108px 0 70px;
+	}
 
 	&__inner {
 		width: 100%;
@@ -14,14 +19,14 @@
 		margin: 0 auto;
 
 		@include mq(pc) {
-			max-width: 700px;
+			max-width: $max-width-inner-pc-lg;
 		}
 	}
 
 	&__sectionTitle {
-		color: #fff;
 		justify-content: flex-end;
 		margin-bottom: 82px;
+		color: #fff;
 
 		&::after {
 			background-color: #fff;
@@ -29,21 +34,29 @@
 	}
 
 	&__text {
-		color: #fff;
-		font-size: 2rem;
-		font-weight: 700;
-		letter-spacing: 0.05em;
-		text-align: center;
 		margin-bottom: 33px;
+		color: #fff;
+		font-weight: 700;
+		font-size: 2rem;
+		text-align: center;
+		letter-spacing: .05em;
+
+		@include mq(pc) {
+			margin-bottom: 42px;
+		}
 	}
 
 	&__button {
 		margin: 0 auto 40px;
+
+		@include mq(pc) {
+			margin: 0 auto 70px;
+		}
 	}
 
 	&__sectionWatermark {
-		text-align: left;
 		color: #fff;
-		opacity: 0.1;
+		opacity: .1;
+		text-align: left;
 	}
 }

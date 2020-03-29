@@ -5,6 +5,6 @@
 // コンテンツの幅
 // ================================================================
 $max-width: 1440px;
-$max-width-header-inner-pc: calc((1200/1440) * 100%);
-$max-width-inner-pc: calc((1030/1440) * 100%);
+$max-width-inner-pc-lg: calc((1200/1440) * 100%);
+$max-width-inner-pc: calc((1000/1200) * 100%);
 $max-width-inner-sp: calc((345/375) * 100%);

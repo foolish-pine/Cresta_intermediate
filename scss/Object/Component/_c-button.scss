@@ -10,11 +10,11 @@
 	background-color: $color-button-bg;
 	text-align: center;
 	transition: all .4s;
-	
+
 	a {
 		display: block;
-		border-radius: 51px;
 		line-height: 60px;
+		border-radius: 51px;
 		color: $color-button-text;
 		font-weight: 700;
 		font-size: 1.6rem;
@@ -29,8 +29,8 @@
 	}
 
 	input {
-		line-height: 60px;
 		width: 100%;
+		line-height: 60px;
 		border: none;
 		border-radius: 51px;
 	}
