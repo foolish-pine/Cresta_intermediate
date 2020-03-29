@@ -12,6 +12,7 @@
 
 ## デザインデータについて
 このサイトのデザインデータはクリエイター向けメディア「クリ★スタ」様にて配布されているものです。<br>
+<br>
 [【コーディング課題】XDからコーディングをしよう【中級編】](https://crestadesign.org/cording-second/)
 <br>
 <br>
@@ -22,16 +23,22 @@ HTML / CSS / Sass / JavaScript(jQuery) / PHP / Adobe XD / Visual Studio Code
 <br>
 
 ## 制作時間
-5時間
+12時間
 <br>
 <br>
 
 ## スクリーンショット
 <br>
 <br>
-<img src="https://github.com/foolish-pine/Cresta_beginner/blob/master/image/cresta1_pc.png?raw=true" width=500px>
+<img src="https://github.com/foolish-pine/Cresta_intermediate/blob/master/image/pc_index.png?raw=true" width=500px>
 <br>
 <br>
-<img src="https://github.com/foolish-pine/Cresta_beginner/blob/master/image/cresta1_sp.png?raw=true" width=500px>
+<img src="https://github.com/foolish-pine/Cresta_intermediate/blob/master/image/pc_contact.png?raw=true" width=500px>
+<br>
+<br>
+<img src="https://github.com/foolish-pine/Cresta_intermediate/blob/master/image/sp_index.png?raw=true" width=500px>
+<br>
+<br>
+<img src="https://github.com/foolish-pine/Cresta_intermediate/blob/master/image/sp_contact.png?raw=true" width=500px>
 <br>
 <br>
