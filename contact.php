@@ -1,10 +1,10 @@
-<!-- <?php
+<?php
 header('X-FRAME-OPTIONS: SAMEORIGIN');
 
 function escape($str) {
   return htmlspecialchars($str,ENT_QUOTES,'UTF-8');
 }
-?> -->
+?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -61,7 +61,7 @@ function escape($str) {
             <p class="p-contactPage__sectionWatermark c-text__sectionWatermark">Contact us</p>
           </div>
         </div>
-        <form class="p-contactPage__form" action="" method="post">
+        <form class="p-contactPage__form" action="php/contact.php" method="post">
           <div class="p-contactPage__purpose">
             <p>お問い合わせ内容</p><br>
             <label for="request"><input type="checkbox" id="request" name="porpose"> 資料請求</label>

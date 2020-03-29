@@ -3,12 +3,11 @@
    ================================================================ */
 
 .p-contact {
-	margin-top: -76px;
-	padding: 176px 0 45px;
-	background-image: url(../../../image/contact-bgi@2x.jpg);
+	background-image: url(../image/contact-bgi@2x.jpg);
 	background-position: center;
 	background-size: cover;
-
+	padding-top: 108px;
+	
 	@include mq(pc) {
 		padding: 108px 0 70px;
 	}
