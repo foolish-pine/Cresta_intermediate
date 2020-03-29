@@ -55,7 +55,7 @@ function escape($str) {
   <main class="l-main">
     <section id="contactPage" class="p-contactPage">
       <div class="p-contactPage__inner">
-        <div class="p-contactPage__mainVisual">
+        <div class="p-contactPage__mainVisual js-mainVisual">
           <div class="p-contactPage__inner">
             <h2 class="p-contactPage__sectionTitle c-text__sectionTitle">Contact</h2>
             <p class="p-contactPage__sectionWatermark c-text__sectionWatermark">Contact us</p>

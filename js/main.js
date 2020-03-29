@@ -11,7 +11,7 @@ $(function () {
     $header = $('.l-header'),
     $headerClone = $header.contents().clone(),
     $headerCloneContainer = $('<div class="l-header--clone"></div>'),
-    threshold = $('.p-mainVisual').outerHeight();
+    threshold = $('.js-mainVisual').outerHeight();
 
   $headerCloneContainer.append($headerClone);
   $headerCloneContainer.appendTo('body');
