@@ -15,6 +15,10 @@ $to = $request_param['email'];
 $mailfrom = "From: test@text.com";
 $subject = "お問い合わせありがとうございます。";
 
+if (isset($request_param['purpose']) && is_array($request_param['purpose'])) {
+  $purpose = implode("、", $request_param['purpose']);
+}
+
 
 //自動返信メール
 $content = "";
@@ -23,9 +27,10 @@ $content .= "お問い合わせありがとうございます。\r\n";
 $content .= "以下の内容でお問い合わせ承りました。\r\n\r\n";
 $content .= "=================================\r\n";
 $content .= "お問い合わせ日時: " . $request_datetime."\r\n";
+$content .= "お問い合わせ内容: " . htmlspecialchars($purpose)."\r\n";
 $content .= "お名前: " . htmlspecialchars($request_param['name'])."\r\n";
 $content .= "メールアドレス: " . htmlspecialchars($request_param['email'])."\r\n";
-$content .= "内容: " . htmlspecialchars($request_param['message'])."\r\n";
+$content .= "その他: " . htmlspecialchars($request_param['message'])."\r\n";
 $content .= "=================================\r\n";
 
 //管理者確認用メール
@@ -35,9 +40,10 @@ $content2 .= "お問い合わせがありました。\r\n";
 $content2 .= "お問い合わせ内容は以下のとおりです。\r\n\r\n";
 $content2 .= "=================================\r\n";
 $content2 .= "お問い合わせ日時: " . $request_datetime."\r\n";
+$content2 .= "お問い合わせ内容: " . htmlspecialchars($purpose)."\r\n";
 $content2 .= "お名前: " . htmlspecialchars($request_param['name'])."\r\n";
 $content2 .= "メールアドレス: " . htmlspecialchars($request_param['email'])."\r\n";
-$content2 .= "内容: " . htmlspecialchars($request_param['message'])."\r\n";
+$content2 .= "その他: " . htmlspecialchars($request_param['message'])."\r\n";
 $content2 .= "================================="."\r\n";
 
 mb_language("Japanese"); 
@@ -62,35 +68,36 @@ if($request_param['token'] === '1234567'){
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>クリ★スタコーディング課題【初級編】</title>
+  <title>クリ★スタコーディング課題【中級編】</title>
   <meta name="description" content="">
-  <link rel="apple-touch-icon" sizes="180x180" href="../image/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../image/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../image/favicon/favicon-16x16.png">
-  <link rel="manifest" href="../image/favicon/site.webmanifest">
-  <link rel="mask-icon" href="../image/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="image/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="image/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="image/favicon/favicon-16x16.png">
+  <link rel="manifest" href="image/favicon/site.webmanifest">
+  <link rel="mask-icon" href="image/favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <!-- Google_Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700|Roboto:400,500,700&display=swap&subset=japanese" rel="stylesheet">
+  <link href=“https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+JP&display=swap” rel=“stylesheet”>
   <!-- CSS -->
   <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body ontouchstart="">
   <header class="l-header">
     <div class="p-header">
       <div class="p-header__inner">
         <div class="p-header__logo">
-          <a href="../index.php">
-            <h1>クリ★スタ</h1>
+          <a href="../index.html">
+            <h1>Cresta Design</h1>
           </a>
         </div>
         <nav class="p-header__nav">
           <ul class="p-header__list">
-            <li class="p-header__item"><a class="js-smoothscroll" href="#about">About</a></li>
-            <li class="p-header__item"><a class="js-smoothscroll" href="#service">Service</a></li>
-            <li class="p-header__item"><a class="js-smoothscroll" href="#news">News</a></li>
-            <li class="p-header__item"><a class="js-smoothscroll" href="#contact">Contact</a></li>
+            <li class="p-header__item"><a class="js-smoothscroll" href="../index.html#concept">Concept</a></li>
+            <li class="p-header__item"><a class="js-smoothscroll" href="../index.html#service">Service</a></li>
+            <li class="p-header__item"><a class="js-smoothscroll" href="../index.html#works">Works</a></li>
+            <li class="p-header__item"><a class="js-smoothscroll" href="../contactPage.php">Contact</a></li>
           </ul>
         </nav>
         <a class="p-header__menu">
@@ -102,9 +109,13 @@ if($request_param['token'] === '1234567'){
     </div>
   </header>
   <main class="l-main">
-    <section id="contact" class="p-contact">
-      <div class="p-contact__inner">
-        <h2 class="p-contact__sectionTitle c-text__sectionTitle">お問い合わせありがとうございました。</h2>
+    <section id="contactPage" class="p-contactPage">
+      <div class="p-contactPage__inner">
+        <div class="p-contactPage__mainVisual">
+          <div class="p-contactPage__inner">
+            <h2 class="p-contactPage__sectionTitle p-contactPage__sectionTitle--post c-text__sectionTitle">お問い合わせありがどうございました。</h2>
+          </div>
+        </div>
       </div>
     </section>
   </main>

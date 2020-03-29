@@ -13,7 +13,7 @@
 
 	&__bg {
 		padding: 100px 0 45px;
-		background-image: url(../../../image/works-bgi@2x.jpg);
+		background-image: url(../image/works-bgi@2x.jpg);
 		background-position: center;
 		background-size: cover;
 
@@ -67,13 +67,14 @@
 
 		@include mq(pc) {
 			flex-direction: row;
+			flex-wrap: wrap;
 			justify-content: space-between;
 			margin-bottom: 50px;
 		}
 	}
 
 	&__card {
-		margin-bottom: 30px;
+		margin: 0 auto 30px;
 	}
 
 	&__button {

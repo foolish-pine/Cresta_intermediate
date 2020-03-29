@@ -17,7 +17,7 @@
 		width: 100vw;
 		margin: 0 calc(50% - 50vw) 30px;
 		padding: 175px 0 50px;
-		background-image: url(../../../image/contact-page-bgi@2x.jpg);
+		background-image: url(../image/contact-page-bgi@2x.jpg);
 		background-position: center;
 		background-size: cover;
 
@@ -30,6 +30,21 @@
 		justify-content: center;
 		margin-bottom: 40px;
 		color: #fff;
+
+		@include mq(pc) {
+			margin-bottom: 20px;
+		}
+
+		&::after {
+			display: none;
+		}
+	}
+
+	&__sectionTitle--post {
+		justify-content: center;
+		margin-bottom: 40px;
+		color: #fff;
+		font-size: 2rem;
 
 		@include mq(pc) {
 			margin-bottom: 20px;
@@ -53,6 +68,7 @@
 	&__form {
 		margin: 0 auto;
 		padding: 67px 0 0;
+		user-select: none;
 
 		@include mq(pc) {
 			width: 100%;

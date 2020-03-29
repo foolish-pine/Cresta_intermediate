@@ -263,7 +263,7 @@ img {
    ================================================================ */
 .l-header {
   position: fixed;
-  z-index: 100;
+  z-index: 101;
   width: 100%;
 }
 
@@ -645,31 +645,45 @@ img {
   メインビジュアル
    ================================================================ */
 .p-mainVisual {
-  height: 600px;
-  background-image: url(../../../image/fv-bgi_01@2x.jpg);
-  background-position: center;
-  background-size: cover;
+  width: 100%;
+  position: relative;
 }
 
 @media print, screen and (min-width: 768px) {
   .p-mainVisual {
     max-width: 1440px;
-    height: 752px;
     margin: 0 auto;
-    background-position: center;
+    height: 752px;
   }
 }
 
-.p-mainVisual__inner {
+.p-mainVisual__slideshow {
+  overflow: hidden;
   position: relative;
-  height: 100%;
-  margin: 0 auto;
+  z-index: 100;
+  max-width: 1440px;
+  height: 600px;
 }
 
 @media print, screen and (min-width: 768px) {
-  .p-mainVisual__inner {
-    max-width: calc((1200/1440) * 100%);
+  .p-mainVisual__slideshow {
+    height: 752px;
   }
+}
+
+.p-mainVisual__slideshow img {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  width: 100%;
+  height: 100%;
+  /* IE対策 */
+  font-family: 'object-fit: cover; object-position: 75% 100%;';
 }
 
 .p-mainVisual__catch {
@@ -681,14 +695,20 @@ img {
   width: 100%;
   height: 194px;
   margin: auto;
+  z-index: 101;
   -webkit-transform: top -50% left -50%;
           transform: top -50% left -50%;
 }
 
+.p-mainVisual__catch span::before {
+  content: "\A";
+  white-space: pre;
+}
+
 @media print, screen and (min-width: 768px) {
   .p-mainVisual__catch {
-    top: 409px;
-    margin: 0;
+    max-width: calc((1200/1440) * 100%);
+    top: 260px;
   }
 }
 
@@ -727,11 +747,6 @@ img {
   .p-mainVisual__catch p:nth-child(n+2) span::before {
     content: '';
   }
-}
-
-.p-mainVisual__catch p:nth-child(n+2) span::before {
-  white-space: pre;
-  content: '\A';
 }
 
 /* ================================================================
@@ -777,19 +792,33 @@ img {
   }
 }
 
+@media print, screen and (min-width: 768px) {
+  .p-concept__sectionSubTitle span::before {
+    content: "\A";
+    white-space: pre;
+  }
+}
+
 .p-concept__text {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 @media print, screen and (min-width: 768px) {
   .p-concept__text {
     width: calc((440/1000) * 100%);
     padding-top: 42px;
+    margin-bottom: 50px;
   }
 }
 
 .p-concept__image {
   margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media print, screen and (min-width: 768px) {
@@ -802,7 +831,6 @@ img {
 .p-concept__image img {
   display: block;
   width: 100%;
-  margin: 0;
 }
 
 @media print, screen and (min-width: 768px) {
@@ -838,7 +866,7 @@ img {
 
 .p-works__bg {
   padding: 100px 0 45px;
-  background-image: url(../../../image/works-bgi@2x.jpg);
+  background-image: url(../image/works-bgi@2x.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -918,6 +946,8 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -926,7 +956,7 @@ img {
 }
 
 .p-works__card {
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
 }
 
 .p-works__button {
@@ -975,11 +1005,12 @@ img {
 .p-service__inner {
   width: 100%;
   margin: 0 auto;
+  max-width: calc((345/375) * 100%);
 }
 
 @media print, screen and (min-width: 768px) {
   .p-service__inner {
-    max-width: calc((1000/1200) * 100%);
+    max-width: calc((1000/1440) * 100%);
   }
 }
 
@@ -1000,7 +1031,7 @@ img {
 
 @media print, screen and (min-width: 768px) {
   .p-service__container {
-    width: 1440px;
+    max-width: 1440px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1009,7 +1040,6 @@ img {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin-bottom: 70px;
-    margin-left: calc((440/1000) * -50%);
   }
 }
 
@@ -1110,11 +1140,10 @@ img {
   Contact
    ================================================================ */
 .p-contact {
-  margin-top: -76px;
-  padding: 176px 0 45px;
-  background-image: url(../../../image/contact-bgi@2x.jpg);
+  background-image: url(../image/contact-bgi@2x.jpg);
   background-position: center;
   background-size: cover;
+  padding: 100px 0 45px;
 }
 
 @media print, screen and (min-width: 768px) {
@@ -1197,7 +1226,7 @@ img {
   width: 100vw;
   margin: 0 calc(50% - 50vw) 30px;
   padding: 175px 0 50px;
-  background-image: url(../../../image/contact-page-bgi@2x.jpg);
+  background-image: url(../image/contact-page-bgi@2x.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -1226,6 +1255,25 @@ img {
   display: none;
 }
 
+.p-contactPage__sectionTitle--post {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 40px;
+  color: #fff;
+  font-size: 2rem;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-contactPage__sectionTitle--post {
+    margin-bottom: 20px;
+  }
+}
+
+.p-contactPage__sectionTitle--post::after {
+  display: none;
+}
+
 .p-contactPage__button {
   margin: 0 auto 80px;
 }
@@ -1239,6 +1287,10 @@ img {
 .p-contactPage__form {
   margin: 0 auto;
   padding: 67px 0 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 @media print, screen and (min-width: 768px) {

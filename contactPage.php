@@ -1,10 +1,10 @@
-<!-- <?php
+<?php
 header('X-FRAME-OPTIONS: SAMEORIGIN');
 
 function escape($str) {
   return htmlspecialchars($str,ENT_QUOTES,'UTF-8');
 }
-?> -->
+?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -41,7 +41,7 @@ function escape($str) {
             <li class="p-header__item"><a class="js-smoothscroll" href="index.html#concept">Concept</a></li>
             <li class="p-header__item"><a class="js-smoothscroll" href="index.html#service">Service</a></li>
             <li class="p-header__item"><a class="js-smoothscroll" href="index.html#works">Works</a></li>
-            <li class="p-header__item"><a class="js-smoothscroll" href="index.html#contact">Contact</a></li>
+            <li class="p-header__item"><a class="js-smoothscroll" href="#">Contact</a></li>
           </ul>
         </nav>
         <a class="p-header__menu">
@@ -61,17 +61,17 @@ function escape($str) {
             <p class="p-contactPage__sectionWatermark c-text__sectionWatermark">Contact us</p>
           </div>
         </div>
-        <form class="p-contactPage__form" action="" method="post">
+        <form class="p-contactPage__form" action="php/contactForm.php" method="post">
           <div class="p-contactPage__purpose">
             <p>お問い合わせ内容</p><br>
-            <label for="request"><input type="checkbox" id="request" name="porpose"> 資料請求</label>
+            <label for="request"><input type="checkbox" id="request" name="purpose[]" value="資料請求"> 資料請求</label>
             <span></span>
-            <label for="consult"><input type="checkbox" id="consult" name="porpose"> お電話でのご相談を希望</label>
+            <label for="consult"><input type="checkbox" id="consult" name="purpose[]" value="お電話でのご相談を希望"> お電話でのご相談を希望</label>
             <span></span>
-            <label for="apply"><input type="checkbox" id="apply" name="porpose"> 申し込み</label>
+            <label for="apply"><input type="checkbox" id="apply" name="purpose[]" value="申し込み"> 申し込み</label>
           </div>
           <div>
-            <label for="name">担当者名</label><br>
+            <label for="name">お名前</label><br>
             <input class="p-contactPage__textbox" type="text" id="name" name="name" required />
           </div>
           <div>

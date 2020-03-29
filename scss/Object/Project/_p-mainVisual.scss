@@ -3,25 +3,37 @@
    ================================================================ */
 
 .p-mainVisual {
-	height: 600px;
-	background-image: url(../../../image/fv-bgi_01@2x.jpg);
-	background-position: center;
-	background-size: cover;
+	width: 100%;
+	position: relative;
 
 	@include mq(pc) {
 		max-width: $max-width;
-		height: 752px;
 		margin: 0 auto;
-		background-position: center;
+		height: 752px;
 	}
 
-	&__inner {
+	&__slideshow {
+		overflow: hidden;
 		position: relative;
-		height: 100%;
-		margin: 0 auto;
-
+		z-index: 100;
+		max-width: $max-width;
+		height: 600px;
+		
 		@include mq(pc) {
-			max-width: $max-width-inner-pc-lg;
+			height: 752px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			display: none;
+			position: absolute;
+			object-fit: cover;
+      object-position: 50% 50%;
+      width: 100%;
+      height: 100%;
+      /* IE対策 */
+      font-family: 'object-fit: cover; object-position: 75% 100%;'
 		}
 	}
 
@@ -34,11 +46,17 @@
 		width: 100%;
 		height: 194px;
 		margin: auto;
+		z-index: 101;
 		transform: top -50% left -50%;
 
+		span::before {
+			content: "\A";
+			white-space: pre;
+		}
+		
 		@include mq(pc) {
-			top: 409px;
-			margin: 0;
+			max-width: $max-width-inner-pc-lg;
+			top: 260px;
 		}
 
 		p:first-child {
@@ -72,11 +90,6 @@
 				span::before {
 					content: '';
 				}
-			}
-
-			span::before {
-				white-space: pre;
-				content: '\A';
 			}
 		}
 	}

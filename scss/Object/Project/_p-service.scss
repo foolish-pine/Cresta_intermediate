@@ -24,9 +24,10 @@
 	&__inner {
 		width: 100%;
 		margin: 0 auto;
+		max-width: $max-width-inner-sp;
 
 		@include mq(pc) {
-			max-width: $max-width-inner-pc;
+			max-width: calc((1000/1440) * 100%);
 		}
 	}
 
@@ -40,11 +41,10 @@
 		margin-bottom: 10px;
 
 		@include mq(pc) {
-			width: $max-width;
+			max-width: $max-width;
 			flex-direction: row;
 			justify-content: space-between;
 			margin-bottom: 70px;
-			margin-left: calc((440/1000) * -50%);
 		}
 	}
 
