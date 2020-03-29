@@ -3,18 +3,26 @@
    ================================================================ */
 
 .p-mainVisual {
-	position: relative;
 	height: 600px;
 	background-image: url(../../../image/fv-bgi_01@2x.jpg);
 	background-position: center;
 	background-size: cover;
-
+	
 	@include mq(pc) {
 		max-width: $max-width;
-		height: 740px;
+		height: 752px;
 		margin: 0 auto;
-		background-image: url(../image/fv-bgi@2x.jpg);
-		background-position: center bottom;
+		background-position: center;
+	}
+	
+	&__inner {
+		position: relative;
+		height: 100%;
+		margin: 0 auto;
+
+		@include mq(pc) {
+			max-width: $max-width-inner-pc-lg;
+		}
 	}
 
 	&__catch {
@@ -29,8 +37,8 @@
 		transform: top -50% left -50%;
 
 		@include mq(pc) {
-			max-width: 449px;
-			height: 136px;
+			top: 409px;
+			margin: 0;
 		}
 
 		p:first-child {
@@ -40,14 +48,15 @@
 			font-size: 3.7rem;
 			text-align: center;
 			letter-spacing: .05em;
-
-		@include mq(pc) {
-				line-height: 136px;
-				font-size: 5rem;
+			
+			@include mq(pc) {
+				text-align: left;
+				margin-bottom: 23px;
+				font-size: 7rem;
 			}
 		}
 
-		p:nth-child(2) {
+		p:nth-child(n+2) {
 			line-height: calc(50/30);
 			color: #fff;
 			font-weight: 700;
@@ -55,9 +64,19 @@
 			text-align: center;
 			letter-spacing: .05em;
 
+			span::before {
+				content: '\A';
+				white-space: pre;
+			}
+
 			@include mq(pc) {
-				line-height: 136px;
-				font-size: 5rem;
+			text-align: left;
+				font-size: 4rem;
+				margin-left: 40px;
+
+				span::before {
+					content: '';
+				}
 			}
 		}
 	}

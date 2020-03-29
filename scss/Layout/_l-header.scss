@@ -8,13 +8,16 @@
   z-index: 100;
 
 	&--clone { //スティッキーヘッダー用のスタイル
-		width: 100%;
-		max-width: $max-width;
+    width: 100%;
 		position: fixed;
 		background-color: $color-header-bg;
 		top: -86px;
     z-index: 101;
     transition: .25s;
+
+    @include mq(pc) {
+      top: -97px;
+    }
     
     &.visible {
       top: 0;
