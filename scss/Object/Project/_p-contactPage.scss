@@ -3,31 +3,37 @@
    ================================================================ */
 
 .p-contactPage {
-	
 	&__inner {
 		width: 100%;
 		max-width: $max-width-inner-sp;
 		margin: 0 auto;
-		
+
 		@include mq(pc) {
-			max-width: 700px;
+			max-width: $max-width-inner-pc-lg;
 		}
 	}
-	
+
 	&__mainVisual {
+		width: 100vw;
+		margin: 0 calc(50% - 50vw) 30px;
 		padding: 175px 0 50px;
 		background-image: url(../../../image/contact-page-bgi@2x.jpg);
 		background-position: center;
 		background-size: cover;
-		margin: 0 calc(50% - 50vw) 30px;
-		width: 100vw;
 
+		@include mq(pc) {
+			padding: 186px 0 43px;
+		}
 	}
 
 	&__sectionTitle {
-		color: #fff;
 		justify-content: center;
 		margin-bottom: 40px;
+		color: #fff;
+
+		@include mq(pc) {
+			margin-bottom: 20px;
+		}
 
 		&::after {
 			display: none;
@@ -39,13 +45,19 @@
 	}
 
 	&__sectionWatermark {
-		text-align: left;
 		color: #fff;
-		opacity: 0.1;
+		opacity: .1;
+		text-align: left;
 	}
 
 	&__form {
+		margin: 0 auto;
 		padding: 67px 0 0;
+
+		@include mq(pc) {
+			width: 100%;
+			max-width: 700px;
+		}
 	}
 
 	&__purpose {
@@ -53,22 +65,38 @@
 
 		p {
 			margin-bottom: -14px;
-		}
-		
-		label {
-			line-height: 1.7;
-			font-size: 1.6rem;
-			font-weight: 400;
-			letter-spacing: 0.05em;
-			color: $color-text;
+
+			@include mq(pc) {
+				margin-bottom: -22px;
+			}
 		}
 
+		label {
+			line-height: 1.7;
+			color: $color-text;
+			font-weight: 400;
+			font-size: 1.6rem;
+			letter-spacing: .05em;
+
+			@include mq(pc) {
+				margin-right: 19px;
+			}
+		}
+
+		span::before {
+			white-space: pre;
+			content: '\A';
+
+			@include mq(pc) {
+				content: '';
+			}
+		}
 	}
 
 	&__textbox {
-		margin-bottom: 22px;
 		width: 100%;
 		line-height: 1.8;
+		margin-bottom: 22px;
 		border: solid 1px $color-form-border;
 	}
 
@@ -77,8 +105,8 @@
 
 		textarea {
 			width: 100%;
-			line-height: 1.8;
 			height: 171px;
+			line-height: 1.8;
 			line-height: 1.5;
 			border: solid 1px $color-form-border;
 		}
@@ -87,5 +115,4 @@
 	&__button {
 		width: 245px;
 	}
-
 }

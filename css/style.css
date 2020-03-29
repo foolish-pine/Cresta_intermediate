@@ -1189,25 +1189,37 @@ img {
 
 @media print, screen and (min-width: 768px) {
   .p-contactPage__inner {
-    max-width: 700px;
+    max-width: calc((1200/1440) * 100%);
   }
 }
 
 .p-contactPage__mainVisual {
+  width: 100vw;
+  margin: 0 calc(50% - 50vw) 30px;
   padding: 175px 0 50px;
   background-image: url(../../../image/contact-page-bgi@2x.jpg);
   background-position: center;
   background-size: cover;
-  margin: 0 calc(50% - 50vw) 30px;
-  width: 100vw;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-contactPage__mainVisual {
+    padding: 186px 0 43px;
+  }
 }
 
 .p-contactPage__sectionTitle {
-  color: #fff;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 40px;
+  color: #fff;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-contactPage__sectionTitle {
+    margin-bottom: 20px;
+  }
 }
 
 .p-contactPage__sectionTitle::after {
@@ -1219,13 +1231,21 @@ img {
 }
 
 .p-contactPage__sectionWatermark {
-  text-align: left;
   color: #fff;
-  opacity: 0.1;
+  opacity: .1;
+  text-align: left;
 }
 
 .p-contactPage__form {
+  margin: 0 auto;
   padding: 67px 0 0;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-contactPage__form {
+    width: 100%;
+    max-width: 700px;
+  }
 }
 
 .p-contactPage__purpose {
@@ -1236,18 +1256,41 @@ img {
   margin-bottom: -14px;
 }
 
+@media print, screen and (min-width: 768px) {
+  .p-contactPage__purpose p {
+    margin-bottom: -22px;
+  }
+}
+
 .p-contactPage__purpose label {
   line-height: 1.7;
-  font-size: 1.6rem;
-  font-weight: 400;
-  letter-spacing: 0.05em;
   color: #171717;
+  font-weight: 400;
+  font-size: 1.6rem;
+  letter-spacing: .05em;
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-contactPage__purpose label {
+    margin-right: 19px;
+  }
+}
+
+.p-contactPage__purpose span::before {
+  white-space: pre;
+  content: '\A';
+}
+
+@media print, screen and (min-width: 768px) {
+  .p-contactPage__purpose span::before {
+    content: '';
+  }
 }
 
 .p-contactPage__textbox {
-  margin-bottom: 22px;
   width: 100%;
   line-height: 1.8;
+  margin-bottom: 22px;
   border: solid 1px #141414;
 }
 
@@ -1257,8 +1300,8 @@ img {
 
 .p-contactPage__textarea textarea {
   width: 100%;
-  line-height: 1.8;
   height: 171px;
+  line-height: 1.8;
   line-height: 1.5;
   border: solid 1px #141414;
 }
