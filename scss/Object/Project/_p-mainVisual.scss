@@ -7,14 +7,14 @@
 	background-image: url(../../../image/fv-bgi_01@2x.jpg);
 	background-position: center;
 	background-size: cover;
-	
+
 	@include mq(pc) {
 		max-width: $max-width;
 		height: 752px;
 		margin: 0 auto;
 		background-position: center;
 	}
-	
+
 	&__inner {
 		position: relative;
 		height: 100%;
@@ -48,11 +48,11 @@
 			font-size: 3.7rem;
 			text-align: center;
 			letter-spacing: .05em;
-			
+
 			@include mq(pc) {
-				text-align: left;
-				margin-bottom: 23px;
+				margin-bottom: 18px;
 				font-size: 7rem;
+				text-align: left;
 			}
 		}
 
@@ -64,19 +64,19 @@
 			text-align: center;
 			letter-spacing: .05em;
 
-			span::before {
-				content: '\A';
-				white-space: pre;
-			}
-
 			@include mq(pc) {
-			text-align: left;
-				font-size: 4rem;
 				margin-left: 40px;
+				font-size: 4rem;
+				text-align: left;
 
 				span::before {
 					content: '';
 				}
+			}
+
+			span::before {
+				white-space: pre;
+				content: '\A';
 			}
 		}
 	}

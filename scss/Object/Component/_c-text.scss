@@ -10,27 +10,26 @@
 	letter-spacing: .05em;
 
 	&__sectionTitle {
-		color: $color-text-sectionTitle;
-		font-weight: 700;
-		font-size: 3rem;
-		font-style: italic;
-		letter-spacing: .1em;
-		margin-bottom: 50px;
 		display: flex;
 		align-items: center;
+		margin-bottom: 50px;
+		color: $color-text-sectionTitle;
+		font-style: italic;
+		font-weight: 700;
+		font-size: 3rem;
+		letter-spacing: .1em;
 
 		@include mq(pc) {
+			margin-bottom: 70px;
 			font-size: 6rem;
-		margin-bottom: 70px;
-
 		}
 
 		&::after {
-			content: "";
 			width: 100px;
 			height: 5px;
 			margin-left: 28px;
 			background-color: $color-text-sectionBorder;
+			content: '';
 
 			@include mq(pc) {
 				width: 200px;
@@ -41,25 +40,25 @@
 	&__sectionSubTitle {
 		line-height: 1.5;
 		margin-bottom: 23px;
-		font-weight: 700;
 		color: $color-text-sectionSubTitle;
+		font-weight: 700;
 		font-size: 2rem;
-		letter-spacing: .05em;
 		text-align: center;
+		letter-spacing: .05em;
 
 		@include mq(pc) {
-			font-size: 3rem;
-			margin-bottom: 60px;
 			line-height: calc(50/30);
+			margin-bottom: 60px;
 			font-weight: 700;
+			font-size: 3rem;
 		}
 	}
 
 	&__sectionWatermark {
-		font-size: 4rem;
-		letter-spacing: .05em;
 		color: $color-text;
 		opacity: .05;
+		font-size: 4rem;
+		letter-spacing: .05em;
 
 		@include mq(pc) {
 			font-size: 9rem;

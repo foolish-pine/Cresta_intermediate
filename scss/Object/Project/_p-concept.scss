@@ -7,15 +7,14 @@
 	padding: 186px 0 40px;
 
 	@include mq(pc) {
-	margin-top: -97px;
-	padding: 197px 0 70px;
-		
+		margin-top: -76px;
+		padding: 176px 0 67px;
 	}
 
 	&__inner--lg {
 		max-width: $max-width-inner-sp;
 		margin: 0 auto;
-		
+
 		@include mq(pc) {
 			max-width: $max-width-inner-pc-lg;
 		}
@@ -29,11 +28,19 @@
 		}
 	}
 
+	&__sectionTitle {
+		@include mq(pc) {
+			margin-bottom: 67px;
+			letter-spacing: .05em;
+		}
+	}
+
 	&__text {
 		margin-bottom: 50px;
 
 		@include mq(pc) {
 			width: calc((440/1000) * 100%);
+			padding-top: 42px;
 		}
 	}
 
@@ -42,13 +49,12 @@
 
 		@include mq(pc) {
 			width: calc((440/1000) * 100%);
-		margin-bottom: 0px;
-
+			margin-bottom: 0;
 		}
 
 		img {
-			width: 100%;
 			display: block;
+			width: 100%;
 			margin: 0;
 		}
 	}
