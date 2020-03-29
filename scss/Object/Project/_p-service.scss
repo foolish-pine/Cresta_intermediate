@@ -24,6 +24,7 @@
 	&__inner {
 		width: 100%;
 		margin: 0 auto;
+		max-width: $max-width-inner-sp;
 
 		@include mq(pc) {
 			max-width: calc((1000/1440) * 100%);

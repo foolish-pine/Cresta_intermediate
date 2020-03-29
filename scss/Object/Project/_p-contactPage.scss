@@ -40,6 +40,21 @@
 		}
 	}
 
+	&__sectionTitle--post {
+		justify-content: center;
+		margin-bottom: 40px;
+		color: #fff;
+		font-size: 2rem;
+
+		@include mq(pc) {
+			margin-bottom: 20px;
+		}
+
+		&::after {
+			display: none;
+		}
+	}
+
 	&__button {
 		margin: 0 auto 80px;
 	}
@@ -53,6 +68,7 @@
 	&__form {
 		margin: 0 auto;
 		padding: 67px 0 0;
+		user-select: none;
 
 		@include mq(pc) {
 			width: 100%;

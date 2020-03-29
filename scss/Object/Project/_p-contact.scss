@@ -6,7 +6,7 @@
 	background-image: url(../image/contact-bgi@2x.jpg);
 	background-position: center;
 	background-size: cover;
-	padding-top: 108px;
+	padding: 100px 0 45px;
 	
 	@include mq(pc) {
 		padding: 108px 0 70px;
