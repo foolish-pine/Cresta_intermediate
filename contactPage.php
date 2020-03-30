@@ -14,6 +14,9 @@ function escape($str) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>クリ★スタコーディング課題【中級編】</title>
   <meta name="description" content="">
+  <!-- 検索結果から除外する -->
+  <meta name="robots" content="none">
+  <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="image/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="image/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="image/favicon/favicon-16x16.png">
@@ -22,7 +25,7 @@ function escape($str) {
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <!-- Google_Fonts -->
-  <link href=“https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+JP&display=swap” rel=“stylesheet”>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,500,700|Noto+Serif:400,400i,700,700i&display=swap&subset=japanese" rel="stylesheet">
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
