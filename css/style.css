@@ -267,29 +267,6 @@ img {
   width: 100%;
 }
 
-.l-header--clone {
-  position: fixed;
-  top: -86px;
-  z-index: 101;
-  width: 100%;
-  -webkit-transition: .25s;
-  transition: .25s;
-}
-
-@media print, screen and (min-width: 768px) {
-  .l-header--clone {
-    top: -76px;
-  }
-}
-
-.l-header--clone.visible {
-  top: 0;
-}
-
-.l-header--clone > .p-header {
-  background-color: #282F35;
-}
-
 /* ================================================================
   メインレイアウト
    ================================================================ */
@@ -466,6 +443,14 @@ img {
   max-width: 1440px;
   margin: 0 auto;
   padding: 30px 0 20px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.p-header.visible {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  background-color: #282F35;
 }
 
 @media print, screen and (min-width: 768px) {
@@ -508,7 +493,7 @@ img {
   display: none;
   position: absolute;
   top: -30px;
-  left: calc((30/375) * -100%);
+  left: calc((15/375) * calc((375/345) * -100%));
   z-index: 101;
   width: 100vw;
   background-color: #282F35;
@@ -695,7 +680,7 @@ img {
   width: 100%;
   height: 194px;
   margin: auto;
-  z-index: 101;
+  z-index: 100;
   -webkit-transform: top -50% left -50%;
           transform: top -50% left -50%;
 }
