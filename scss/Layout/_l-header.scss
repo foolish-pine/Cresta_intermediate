@@ -6,24 +6,4 @@
 	position: fixed;
 	z-index: 101;
 	width: 100%;
-
-	&--clone { //スティッキーヘッダー用のスタイル
-		position: fixed;
-		top: -86px;
-		z-index: 101;
-		width: 100%;
-		transition: .25s;
-
-    @include mq(pc) {
-			top: -76px;
-		}
-
-		&.visible {
-			top: 0;
-		}
-
-		&>.p-header {
-			background-color: $color-header-bg;
-		}
-	}
 }
