@@ -48,19 +48,23 @@ function spaceTrim($str)
   return $str;
 }
 
+// トークン生成
+if (!isset($_SESSION['token'])) {
+  $_SESSION['token'] = sha1(random_bytes(30));
+}
+
 if (!empty($clean['back'])) {
   $page_flag = 0;
-
-  // トークン生成
-  if (!isset($_SESSION['token'])) {
-    $_SESSION['token'] = sha1(random_bytes(30));
-  }
-} elseif (!empty($clean['confirmation'])) {
-  // tokenを変数に入れる
-  $token = $_POST['token'];
-
+  
   // トークンを確認し、確認画面を表示
-  if (!(hash_equals($token, $_SESSION['token']) && !empty($token))) {
+  if (!(hash_equals($_POST['token'], $_SESSION['token']))) {
+    echo "不正アクセスの可能性があります";
+    exit();
+  }
+
+} elseif (!empty($clean['confirmation'])) {
+
+  if (!(hash_equals($_POST['token'], $_SESSION['token']))) {
     echo "不正アクセスの可能性があります";
     exit();
   }
@@ -77,6 +81,11 @@ if (!empty($clean['back'])) {
   }
 
 } elseif (!empty($clean['submit'])) {
+
+  if (!(hash_equals($_POST['token'], $_SESSION['token']))) {
+    echo "不正アクセスの可能性があります";
+    exit();
+  }
 
   if (!empty($_SESSION['page']) && $_SESSION['page'] === true) {
 
@@ -213,6 +222,7 @@ function validation($data)
         <!-- お問い合わせフォーム入力ページ -->
         <?php if ($page_flag === 0) : ?>
           <form class="p-contact-page__form" action="" method="post">
+            <input type="hidden" name="token" value="<?php $token = $_SESSION['token']; echo $token?>">
             <?php if (!empty($error)) : ?>
               <ul class="p-contact-page__errorList">
                 <?php foreach ($error as $value) :?>
@@ -220,7 +230,6 @@ function validation($data)
                 <?php endforeach; ?>
               </ul>
             <?php endif; ?>
-            <input type="hidden" name="token" value="<?= $_SESSION['token'] ?>">
             <div class="p-contact-page__purpose">
               <p>お問い合わせ内容</p><br>
               <label for="request"><input type="checkbox" id="request" name="request" value="資料請求" <?php if (!empty($clean['request'])) {echo 'checked';} ?>> 資料請求</label>
@@ -291,6 +300,7 @@ function validation($data)
                 <input type="submit" name="submit" value="送信">
               </div>
             </div>
+            <input type="hidden" name="token" value="<?php $token = $_SESSION['token']; echo $token?>">
             <input type="hidden" name="request" value="<?php if (isset($clean['request'])) {echo $clean['request'];} ?>">
             <input type="hidden" name="consult" value="<?php if (isset($clean['consult'])) {echo $clean['consult'];} ?>">
             <input type="hidden" name="apply" value="<?php if (isset($clean['apply'])) {echo $clean['apply'];} ?>">
