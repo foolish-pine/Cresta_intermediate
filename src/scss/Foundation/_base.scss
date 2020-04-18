@@ -1,0 +1,29 @@
+/* ================================================================
+  ベース
+   ================================================================ */
+
+html {
+  font-size: 62.5%; // ルートのフォントサイズ = 10px
+}
+
+body {
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"); // Google Fonts
+
+  display: flex; // フッター固定用
+  flex-direction: column; // フッター固定用
+  min-height: 100vh; // フッター固定用
+  font-family: "Noto Serif", "Noto Serif JP", sans-serif;
+  font-size: 1.6rem; // ルートのフォントサイズ = 1.6em (16px)
+}
+
+main {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+button:focus {
+  outline: 0;
+}

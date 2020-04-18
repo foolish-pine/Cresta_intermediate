@@ -1,0 +1,67 @@
+/* ===================================================================
+  テキストコンポーネント
+   =================================================================== */
+
+.c-text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: calc(30 / 16);
+  color: $color-text;
+  letter-spacing: 0.05em;
+
+  &__sectionTitle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 700;
+    color: $color-text-sectionTitle;
+    letter-spacing: 0.1em;
+
+    @include mq(pc) {
+      margin-bottom: 70px;
+      font-size: 6rem;
+    }
+
+    &::after {
+      width: 100px;
+      height: 5px;
+      margin-left: 28px;
+      content: "";
+      background: $color-text-sectionBorder;
+
+      @include mq(pc) {
+        width: 200px;
+      }
+    }
+  }
+
+  &__sectionSubTitle {
+    margin-bottom: 23px;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: $color-text-sectionSubTitle;
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    @include mq(pc) {
+      margin-bottom: 60px;
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: calc(50 / 30);
+    }
+  }
+
+  &__sectionWatermark {
+    font-size: 4rem;
+    color: $color-text;
+    letter-spacing: 0.05em;
+    opacity: 0.05;
+
+    @include mq(pc) {
+      font-size: 9rem;
+    }
+  }
+}

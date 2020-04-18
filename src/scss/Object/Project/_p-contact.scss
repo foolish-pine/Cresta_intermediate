@@ -1,0 +1,59 @@
+/* ================================================================
+  Contact
+   ================================================================ */
+
+.p-contact {
+  padding: 100px 0 45px;
+  background: url(../image/contact-bgi@2x.jpg) center / cover;
+
+  @include mq(pc) {
+    padding: 108px 0 70px;
+  }
+
+  &__inner {
+    width: 100%;
+    max-width: $max-width-inner-sp;
+    margin: 0 auto;
+
+    @include mq(pc) {
+      max-width: $max-width-inner-pc-lg;
+    }
+  }
+
+  &__sectionTitle {
+    justify-content: flex-end;
+    margin-bottom: 82px;
+    color: #fff;
+
+    &::after {
+      background: #fff;
+    }
+  }
+
+  &__text {
+    margin-bottom: 33px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    @include mq(pc) {
+      margin-bottom: 42px;
+    }
+  }
+
+  &__button {
+    margin: 0 auto 40px;
+
+    @include mq(pc) {
+      margin: 0 auto 70px;
+    }
+  }
+
+  &__sectionWatermark {
+    color: #fff;
+    text-align: left;
+    opacity: 0.1;
+  }
+}

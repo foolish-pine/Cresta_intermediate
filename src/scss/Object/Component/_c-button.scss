@@ -1,0 +1,37 @@
+/* ===================================================================
+  ボタンコンポーネント
+   =================================================================== */
+
+.c-button {
+  width: 235px;
+  height: 60px;
+  text-align: center;
+  background: $color-button-bg;
+  border-radius: 51px;
+  box-shadow: 0 0 6px $color-button-shadow;
+  transition: all 0.4s;
+
+  a {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 60px;
+    color: $color-button-text;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    border-radius: 51px;
+  }
+
+  &:hover {
+    font-weight: 700;
+    background: #fff;
+    transition: all 0.4s;
+  }
+
+  input {
+    width: 100%;
+    line-height: 60px;
+    border: none;
+    border-radius: 51px;
+  }
+}

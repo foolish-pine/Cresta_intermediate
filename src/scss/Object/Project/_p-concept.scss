@@ -1,0 +1,84 @@
+/* ================================================================
+  Concept
+   ================================================================ */
+
+.p-concept {
+  padding: 186px 0 40px;
+  margin-top: -86px;
+
+  @include mq(pc) {
+    padding: 176px 0 67px;
+    margin-top: -76px;
+  }
+
+  &__inner--lg {
+    max-width: $max-width-inner-sp;
+    margin: 0 auto;
+
+    @include mq(pc) {
+      max-width: $max-width-inner-pc-lg;
+    }
+  }
+
+  &__inner {
+    margin: 0 auto;
+
+    @include mq(pc) {
+      max-width: $max-width-inner-pc;
+    }
+  }
+
+  &__sectionTitle {
+    @include mq(pc) {
+      margin-bottom: 67px;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &__sectionSubTitle {
+    @include mq(pc) {
+      span::before {
+        white-space: pre;
+        content: "\A";
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+
+    @include mq(pc) {
+      width: calc((440 / 1000) * 100%);
+      padding-top: 42px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__image {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    @include mq(pc) {
+      width: calc((440 / 1000) * 100%);
+      margin-bottom: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__container {
+    @include mq(pc) {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 70px;
+    }
+  }
+
+  &__sectionWatermark {
+    text-align: right;
+  }
+}

@@ -1,0 +1,183 @@
+/* ================================================================
+  Contact Page
+   ================================================================ */
+
+.p-contact-page {
+  &__inner {
+    width: 100%;
+    max-width: $max-width-inner-sp;
+    margin: 0 auto;
+
+    @include mq(pc) {
+      max-width: $max-width-inner-pc-lg;
+    }
+  }
+
+  &__mainVisual {
+    width: 100vw;
+    padding: 175px 0 50px;
+    margin: 0 calc(50% - 50vw) 30px;
+    background: url(../image/contact-page-bgi@2x.jpg) center/ cover;
+
+    @include mq(pc) {
+      padding: 186px 0 43px;
+    }
+  }
+
+  &__sectionTitle {
+    justify-content: center;
+    margin-bottom: 40px;
+    color: #fff;
+
+    @include mq(pc) {
+      margin-bottom: 20px;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &__sectionTitle--post {
+    justify-content: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #fff;
+
+    @include mq(pc) {
+      margin-bottom: 20px;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &__button {
+    margin: 0 auto 80px;
+  }
+
+  &__sectionWatermark {
+    color: #fff;
+    text-align: left;
+    opacity: 0.1;
+  }
+
+  &__form {
+    padding: 67px 0 0;
+    margin: 0 auto;
+    user-select: none;
+
+    @include mq(pc) {
+      width: 100%;
+      max-width: 700px;
+    }
+  }
+
+  &__purpose {
+    margin-bottom: 18px;
+
+    p {
+      margin-bottom: -14px;
+
+      @include mq(pc) {
+        margin-bottom: -22px;
+      }
+    }
+
+    label {
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 1.7;
+      color: $color-text;
+      letter-spacing: 0.05em;
+
+      @include mq(pc) {
+        margin-right: 19px;
+      }
+    }
+
+    span::before {
+      white-space: pre;
+      content: "\A";
+
+      @include mq(pc) {
+        content: "";
+      }
+    }
+  }
+
+  &__purpose--confirmation {
+    font-size: 1.6rem;
+  }
+
+  &__text--confirmation {
+    margin-bottom: 60px;
+    font-size: 1.9rem;
+    text-align: center;
+  }
+
+  &__textbox {
+    width: 100%;
+    margin-bottom: 22px;
+    line-height: 1.8;
+    border: solid 1px $color-form-border;
+  }
+
+  &__textbox--confirmation {
+    width: 100%;
+    margin-bottom: 22px;
+    line-height: 2;
+    background: $color-form-bg;
+    border: solid 1px $color-form-border;
+  }
+
+  &__textarea {
+    margin-bottom: 75px;
+
+    textarea {
+      width: 100%;
+      height: 171px;
+      line-height: 1.8;
+      resize: none;
+      border: solid 1px $color-form-border;
+    }
+  }
+
+  &__textarea--confirmation {
+    width: 100%;
+    min-height: 171px;
+    margin-bottom: 27px;
+    line-height: 1.5;
+    background: $color-form-bg;
+    border: solid 1px $color-form-border;
+  }
+
+  &__errorList {
+    padding: 10px 30px;
+    margin-bottom: 30px;
+    font-size: 1.9rem;
+    color: #ff2e5a;
+    text-align: left;
+    border: 1px solid #ff2e5a;
+    border-radius: 5px;
+  }
+
+  &__buttonContainer {
+    display: flex;
+  }
+
+  &__button {
+    width: 245px;
+  }
+
+  &__button--back {
+    font-weight: 700;
+    background: #fff;
+
+    &:hover {
+      font-weight: 700;
+      background: #fff;
+    }
+  }
+}
