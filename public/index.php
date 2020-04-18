@@ -1,3 +1,8 @@
+<!-- 相対パス -->
+
+<!-- ナビゲーションリンクのパス -->
+
+<!-- ヘッダー読み込み -->
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -9,25 +14,19 @@
   <!-- 検索結果から除外する -->
   <meta name="robots" content="none">
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="image/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="image/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="image/favicon/favicon-16x16.png">
-  <link rel="manifest" href="image/favicon/site.webmanifest">
-  <link rel="mask-icon" href="image/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <!-- Google_Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,500,700|Noto+Serif:400,400i,700,700i&display=swap&subset=japanese" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png" />
+  <link rel="icon" href="./img/favicon/favicon.ico" />
   <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 
-<body ontouchstart="">
+<body>
+  <!-- ヘッダーここから -->
   <header class="l-header">
     <div class="p-header">
       <div class="p-header__inner">
         <div class="p-header__logo">
-          <a href="#">
+          <a href="./index.php">
             <h1>Cresta Design</h1>
           </a>
         </div>
@@ -36,7 +35,7 @@
             <li class="p-header__item"><a class="js-smoothscroll" href="#concept">Concept</a></li>
             <li class="p-header__item"><a class="js-smoothscroll" href="#service">Service</a></li>
             <li class="p-header__item"><a class="js-smoothscroll" href="#works">Works</a></li>
-            <li class="p-header__item"><a class="js-smoothscroll" href="contact-page.php">Contact</a></li>
+            <li class="p-header__item"><a class="js-smoothscroll" href="#contact">Contact</a></li>
           </ul>
         </nav>
         <a class="p-header__menu">
@@ -47,12 +46,13 @@
       </div>
     </div>
   </header>
+  <!-- ヘッダーここまで -->
   <main class="l-main">
     <section class="p-mainVisual js-mainVisual">
       <div class="p-mainVisual__slideshow">
-        <img src="image/fv-bgi_01@2x.jpg" alt="">
-        <img src="image/fv-bgi_02@2x.jpg" alt="">
-        <img src="image/fv-bgi_03@2x.jpg" alt="">
+        <img src="img/fv-bgi_01@2x.jpg" alt="">
+        <img src="img/fv-bgi_02@2x.jpg" alt="">
+        <img src="img/fv-bgi_03@2x.jpg" alt="">
       </div>
       <div class="p-mainVisual__catch">
         <p>Design for Smile.</p>
@@ -73,7 +73,7 @@
               Designだからこそできる空間デザインを提供させていただきます。
             </p>
             <div class="p-concept__image">
-              <img src="image/concept-image@2x.jpg" alt="">
+              <img src="img/concept-image@2x.jpg" alt="">
             </div>
           </div>
         </div>
@@ -88,7 +88,7 @@
             <div class="p-works__container">
               <div class="p-works__card c-card">
                 <div class="c-card__image">
-                  <img src="image/card-img01@2x.jpg" alt="">
+                  <img src="img/card-img01@2x.jpg" alt="">
                 </div>
                 <p class="c-card__text">
                   新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。
@@ -96,7 +96,7 @@
               </div>
               <div class="p-works__card c-card">
                 <div class="c-card__image">
-                  <img src="image/card-img02@2x.jpg" alt="">
+                  <img src="img/card-img02@2x.jpg" alt="">
                 </div>
                 <p class="c-card__text">
                   新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。
@@ -104,7 +104,7 @@
               </div>
               <div class="p-works__card c-card">
                 <div class="c-card__image">
-                  <img src="image/card-img03@2x.jpg" alt="">
+                  <img src="img/card-img03@2x.jpg" alt="">
                 </div>
                 <p class="c-card__text">
                   新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。
@@ -128,7 +128,7 @@
           <a href="#">
             <div class="p-service__image">
               <div class="p-service__image--hover"></div>
-              <img src="image/service-img01@2x.jpg" alt="">
+              <img src="img/service-img01@2x.jpg" alt="">
             </div>
             <p class="p-service__contentName">Hearing</p>
           </a>
@@ -137,7 +137,7 @@
           <a href="#">
             <div class="p-service__image">
               <div class="p-service__image--hover"></div>
-              <img src="image/service-img02@2x.jpg" alt="">
+              <img src="img/service-img02@2x.jpg" alt="">
             </div>
             <p class="p-service__contentName">Planning</p>
           </a>
@@ -146,7 +146,7 @@
           <a href="#">
             <div class="p-service__image">
               <div class="p-service__image--hover"></div>
-              <img src="image/service-img03@2x.jpg" alt="">
+              <img src="img/service-img03@2x.jpg" alt="">
             </div>
             <p class="p-service__contentName">Direction</p>
           </a>
@@ -161,12 +161,14 @@
         <h2 class="p-contact__sectionTitle c-text__sectionTitle">Contact</h2>
         <p class="p-contact__text">お気軽にご相談ください。</p>
         <div class="p-contact__button c-button">
-          <a href="contact-page.php">Contact</a>
+          <a href="contact/index.php">Contact</a>
         </div>
         <p class="p-contact__sectionWatermark c-text__sectionWatermark">Contact us</p>
       </div>
     </section>
   </main>
+  <!-- フッター読み込み -->
+  <!-- フッターここから -->
   <footer class="l-footer">
     <div class="p-footer">
       <div class="p-footer__inner">
@@ -174,9 +176,10 @@
       </div>
     </div>
   </footer>
+  <!-- フッターここまで -->
   <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="./js/jQuery/jquery-3.5.0.min.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

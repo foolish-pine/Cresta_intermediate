@@ -43,7 +43,6 @@
     @include mq(pc) {
       flex-direction: row;
       justify-content: space-between;
-      max-width: $max-width;
       margin-bottom: 70px;
     }
   }

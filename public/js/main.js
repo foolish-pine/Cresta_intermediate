@@ -8,33 +8,16 @@
 
 $(function () {
   var $window = $(window),
-    $header = $('.p-header'),
-    threshold = $('.js-mainVisual').outerHeight();
+    $header = $(".p-header"),
+    threshold = $(".js-mainVisual").outerHeight();
 
-  $window.on('load', function () {
+  $window.on("scroll", function () {
     if ($window.scrollTop() > threshold) {
-      $header.addClass('visible');
+      $header.addClass("visible");
     } else {
-      $header.removeClass('visible');
+      $header.removeClass("visible");
     }
   });
-
-  var timer = false;
-  $window.on('scroll', function () {
-    if (timer !== false) {
-      clearTimeout(timer);
-    }
-    timer = setTimeout(function () {
-      $window.on('scroll', function () {
-        if ($window.scrollTop() > threshold) {
-          $header.addClass('visible');
-        } else {
-          $header.removeClass('visible');
-        }
-      });
-    }, 60);
-  });
-  $window.trriger('scroll');
 });
 
 // ---------------------------------------------
@@ -61,17 +44,17 @@ $(function () {
 
 // ヘッダー
 $(function () {
-  $('.p-header__menu').on('click', function () {
-    $('.p-header__menuLine').stop(true).toggleClass('active');
-    $('.p-header__nav').stop(true).fadeToggle();
+  $(".p-header__menu").on("click", function () {
+    $(".p-header__menuLine").stop(true).toggleClass("active");
+    $(".p-header__nav").stop(true).fadeToggle();
   });
 });
 
 $(function () {
-  $('.p-header__nav, .p-header__logo').on('click', function () {
-    if ($('.p-header__menuLine').hasClass('active')) {
-      $('.p-header__menuLine').stop(true).toggleClass('active');
-      $('.p-header__nav').stop(true).fadeToggle();
+  $(".p-header__nav, .p-header__logo").on("click", function () {
+    if ($(".p-header__menuLine").hasClass("active")) {
+      $(".p-header__menuLine").stop(true).toggleClass("active");
+      $(".p-header__nav").stop(true).fadeToggle();
     }
   });
 });
@@ -80,12 +63,12 @@ $(function () {
 // スムーススクロール（ページ内リンク）
 // ---------------------------------------------
 $(function () {
-  $('.js-smoothscroll').click(function () {
+  $(".js-smoothscroll").click(function () {
     var speed = 500;
-    href = $(this).attr("href"),
-      target = $(href == "#" || href == "" ? 'html' : href),
-      position = target.offset().top;
-    $('html, body').animate({ scrollTop: position }, speed);
+    (href = $(this).attr("href")),
+      (target = $(href == "#" || href == "" ? "html" : href)),
+      (position = target.offset().top);
+    $("html, body").animate({ scrollTop: position }, speed);
   });
 });
 
@@ -93,7 +76,7 @@ $(function () {
 // スライドショー
 // ---------------------------------------------
 $(function () {
-  var $slides = $('.p-mainVisual__slideshow').find('img'),
+  var $slides = $(".p-mainVisual__slideshow").find("img"),
     slideCount = $slides.length,
     currentIndex = 0;
 

@@ -161,6 +161,11 @@ function validation($data)
 }
 ?>
 
+<!-- 相対パス -->
+
+<!-- ナビゲーションリンクのパス -->
+
+<!-- ヘッダー読み込み -->
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -172,34 +177,28 @@ function validation($data)
   <!-- 検索結果から除外する -->
   <meta name="robots" content="none">
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="image/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="image/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="image/favicon/favicon-16x16.png">
-  <link rel="manifest" href="image/favicon/site.webmanifest">
-  <link rel="mask-icon" href="image/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <!-- Google_Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,500,700|Noto+Serif:400,400i,700,700i&display=swap&subset=japanese" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="..//img/favicon/apple-touch-icon.png" />
+  <link rel="icon" href="..//img/favicon/favicon.ico" />
   <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="..//css/style.css" />
 </head>
 
-<body ontouchstart="">
+<body>
+  <!-- ヘッダーここから -->
   <header class="l-header">
     <div class="p-header">
       <div class="p-header__inner">
         <div class="p-header__logo">
-          <a href="index.html">
+          <a href="..//index.php">
             <h1>Cresta Design</h1>
           </a>
         </div>
         <nav class="p-header__nav">
           <ul class="p-header__list">
-            <li class="p-header__item"><a class="js-smoothscroll" href="index.html#concept">Concept</a></li>
-            <li class="p-header__item"><a class="js-smoothscroll" href="index.html#service">Service</a></li>
-            <li class="p-header__item"><a class="js-smoothscroll" href="index.html#works">Works</a></li>
-            <li class="p-header__item"><a class="js-smoothscroll" href="#">Contact</a></li>
+            <li class="p-header__item"><a class="js-smoothscroll" href="../index.php#concept">Concept</a></li>
+            <li class="p-header__item"><a class="js-smoothscroll" href="../index.php#service">Service</a></li>
+            <li class="p-header__item"><a class="js-smoothscroll" href="../index.php#works">Works</a></li>
+            <li class="p-header__item"><a class="js-smoothscroll" href="../index.php#contact">Contact</a></li>
           </ul>
         </nav>
         <a class="p-header__menu">
@@ -210,6 +209,7 @@ function validation($data)
       </div>
     </div>
   </header>
+  <!-- ヘッダーここまで -->
   <main class="l-main">
     <section id="contact-page" class="p-contact-page">
       <div class="p-contact-page__inner">
@@ -221,105 +221,108 @@ function validation($data)
         </div>
         <!-- お問い合わせフォーム入力ページ -->
         <?php if ($page_flag === 0) : ?>
-          <form class="p-contact-page__form" action="" method="post">
-            <input type="hidden" name="token" value="<?php $token = $_SESSION['token']; echo $token?>">
-            <?php if (!empty($error)) : ?>
-              <ul class="p-contact-page__errorList">
-                <?php foreach ($error as $value) :?>
-                  <li><?php echo $value; ?></li>
-                <?php endforeach; ?>
-              </ul>
-            <?php endif; ?>
-            <div class="p-contact-page__purpose">
-              <p>お問い合わせ内容</p><br>
-              <label for="request"><input type="checkbox" id="request" name="request" value="資料請求" <?php if (!empty($clean['request'])) {echo 'checked';} ?>> 資料請求</label>
-              <span></span>
-              <label for="consult"><input type="checkbox" id="consult" name="consult" value="お電話でのご相談を希望" <?php if (!empty($clean['consult']))  {echo 'checked';} ?>> お電話でのご相談を希望</label>
-              <span></span>
-              <label for="apply"><input type="checkbox" id="apply" name="apply" value="申し込み" <?php if (!empty($clean['apply'])) {echo 'checked';} ?>> 申し込み</label>
-            </div>
-            <div>
-              <label for="name">お名前</label><br>
-              <input class="p-contact-page__textbox" type="text" id="name" name="name" value="<?php if (!empty($clean['name'])) {echo $clean['name'];} ?>" required />
-            </div>
-            <div>
-              <label for="tel">電話番号</label><br>
-              <input class="p-contact-page__textbox" type="text" id="tel" name="tel" value="<?php if (!empty($clean['tel'])) {echo $clean['tel'];} ?>" required />
-            </div>
-            <div>
-              <label for="email">メールアドレス</label><br>
-              <input class="p-contact-page__textbox" type="text" id="email" name="email" value="<?php if (!empty($clean['email'])) {echo $clean['email'];} ?>" required />
-            </div>
-            <div class="p-contact-page__textarea">
-              <label for="message">その他</label><br>
-              <textarea id="message" name="message" required><?php if (!empty($clean['message'])) {echo $clean['message'];} ?></textarea>
-            </div>
-            <div class="p-contact-page__button c-button">
-              <input type="submit" name="confirmation" value="確認画面へ">
-            </div>
-          </form>
+        <form class="p-contact-page__form" action="" method="post">
+          <input type="hidden" name="token" value="<?php $token = $_SESSION['token']; echo $token?>">
+          <?php if (!empty($error)) : ?>
+          <ul class="p-contact-page__errorList">
+            <?php foreach ($error as $value) :?>
+            <li><?php echo $value; ?></li>
+            <?php endforeach; ?>
+          </ul>
+          <?php endif; ?>
+          <div class="p-contact-page__purpose">
+            <p>お問い合わせ内容</p><br>
+            <label for="request"><input type="checkbox" id="request" name="request" value="資料請求" <?php if (!empty($clean['request'])) {echo 'checked';} ?>> 資料請求</label>
+            <span></span>
+            <label for="consult"><input type="checkbox" id="consult" name="consult" value="お電話でのご相談を希望" <?php if (!empty($clean['consult']))  {echo 'checked';} ?>> お電話でのご相談を希望</label>
+            <span></span>
+            <label for="apply"><input type="checkbox" id="apply" name="apply" value="申し込み" <?php if (!empty($clean['apply'])) {echo 'checked';} ?>> 申し込み</label>
+          </div>
+          <div>
+            <label for="name">お名前</label><br>
+            <input class="p-contact-page__textbox" type="text" id="name" name="name" value="<?php if (!empty($clean['name'])) {echo $clean['name'];} ?>" required />
+          </div>
+          <div>
+            <label for="tel">電話番号</label><br>
+            <input class="p-contact-page__textbox" type="text" id="tel" name="tel" value="<?php if (!empty($clean['tel'])) {echo $clean['tel'];} ?>" required />
+          </div>
+          <div>
+            <label for="email">メールアドレス</label><br>
+            <input class="p-contact-page__textbox" type="text" id="email" name="email" value="<?php if (!empty($clean['email'])) {echo $clean['email'];} ?>" required />
+          </div>
+          <div class="p-contact-page__textarea">
+            <label for="message">その他</label><br>
+            <textarea id="message" name="message" required><?php if (!empty($clean['message'])) {echo $clean['message'];} ?></textarea>
+          </div>
+          <div class="p-contact-page__button c-button">
+            <input type="submit" name="confirmation" value="確認画面へ">
+          </div>
+        </form>
         <!-- お問い合わせフォーム確認ページ -->
         <?php elseif ($page_flag === 1) : ?>
-          <form class="p-contact-page__form" action="" method="post">
-            <p class="p-contact-page__text--confirmation c-text">以下の内容で送信します。よろしいですか？<br>※利用者宛と管理者宛のメールが入力されたメールアドレスに送信されます。</p>
-            <div class="p-contact-page__purpose">
-              <p>お問い合わせ内容</p><br>
-              <?php
+        <form class="p-contact-page__form" action="" method="post">
+          <p class="p-contact-page__text--confirmation c-text">
+            以下の内容で送信します。よろしいですか？<br>※利用者宛と管理者宛のメールが入力されたメールアドレスに送信されます。</p>
+          <div class="p-contact-page__purpose">
+            <p>お問い合わせ内容</p><br>
+            <?php
                 echo '<div class="p-contact-page__purpose--confirmation">' . $purpose_str . '</div>'; 
               ?>
-            </div>
-            <div>
-              <label for="name">お名前</label><br>
-              <?php if (isset($clean['name'])) {
+          </div>
+          <div>
+            <label for="name">お名前</label><br>
+            <?php if (isset($clean['name'])) {
                 echo '<div class="p-contact-page__textbox--confirmation">' . $clean['name'] . '</div>';
               } ?>
-            </div>
-            <div>
-              <label for="tel">電話番号</label><br>
-              <?php if (isset($clean['tel'])) {
+          </div>
+          <div>
+            <label for="tel">電話番号</label><br>
+            <?php if (isset($clean['tel'])) {
                 echo '<div class="p-contact-page__textbox--confirmation">' . $clean['tel'] . '</div>';
               } ?>
-            </div>
-            <div>
-              <label for="email">メールアドレス</label><br>
-              <?php if (isset($clean['email'])) {
+          </div>
+          <div>
+            <label for="email">メールアドレス</label><br>
+            <?php if (isset($clean['email'])) {
                 echo '<div class="p-contact-page__textbox--confirmation">' . $clean['email'] . '</div>';
               } ?>
-            </div>
-            <div class="p-contact-page__textarea">
-              <label for="message">その他</label><br>
-              <?php if (isset($clean['message'])) {
+          </div>
+          <div class="p-contact-page__textarea">
+            <label for="message">その他</label><br>
+            <?php if (isset($clean['message'])) {
                 echo '<div class="p-contact-page__textarea--confirmation">' . nl2br($clean['message']) . '</div>';
               } ?>
+          </div>
+          <div class="p-contact-page__buttonContainer">
+            <div class="p-contact-page__button p-contact-page__button--back c-button">
+              <input type="submit" name="back" value="戻る">
             </div>
-            <div class="p-contact-page__buttonContainer">
-              <div class="p-contact-page__button p-contact-page__button--back c-button">
-                <input type="submit" name="back" value="戻る">
-              </div>
-              <div class="p-contact-page__button c-button">
-                <input type="submit" name="submit" value="送信">
-              </div>
+            <div class="p-contact-page__button c-button">
+              <input type="submit" name="submit" value="送信">
             </div>
-            <input type="hidden" name="token" value="<?php $token = $_SESSION['token']; echo $token?>">
-            <input type="hidden" name="request" value="<?php if (isset($clean['request'])) {echo $clean['request'];} ?>">
-            <input type="hidden" name="consult" value="<?php if (isset($clean['consult'])) {echo $clean['consult'];} ?>">
-            <input type="hidden" name="apply" value="<?php if (isset($clean['apply'])) {echo $clean['apply'];} ?>">
-            <input type="hidden" name="apply" value="<?php if (isset($purpose_str)) {echo $purpose_str;} ?>">
-            <input type="hidden" name="name" value="<?php echo $clean['name']; ?>">
-            <input type="hidden" name="tel" value="<?php echo $clean['tel']; ?>">
-            <input type="hidden" name="email" value="<?php echo $clean['email']; ?>">
-            <input type="hidden" name="message" value="<?php echo $clean['message']; ?>">
-          </form>
+          </div>
+          <input type="hidden" name="token" value="<?php $token = $_SESSION['token']; echo $token?>">
+          <input type="hidden" name="request" value="<?php if (isset($clean['request'])) {echo $clean['request'];} ?>">
+          <input type="hidden" name="consult" value="<?php if (isset($clean['consult'])) {echo $clean['consult'];} ?>">
+          <input type="hidden" name="apply" value="<?php if (isset($clean['apply'])) {echo $clean['apply'];} ?>">
+          <input type="hidden" name="apply" value="<?php if (isset($purpose_str)) {echo $purpose_str;} ?>">
+          <input type="hidden" name="name" value="<?php echo $clean['name']; ?>">
+          <input type="hidden" name="tel" value="<?php echo $clean['tel']; ?>">
+          <input type="hidden" name="email" value="<?php echo $clean['email']; ?>">
+          <input type="hidden" name="message" value="<?php echo $clean['message']; ?>">
+        </form>
         <!-- お問い合わせフォーム完了ページ -->
         <?php elseif ($page_flag === 2) : ?>
-          <h2 class="p-contact-page__text--confirmation c-text">送信が完了しました。</h2>
-          <div class="p-contact-page__button c-button">
-            <a href="index.html">トップへ戻る</a>
-          </div>
+        <h2 class="p-contact-page__text--confirmation c-text">送信が完了しました。</h2>
+        <div class="p-contact-page__button c-button">
+          <a href="index.html">トップへ戻る</a>
+        </div>
         <?php endif; ?>
       </div>
     </section>
   </main>
+  <!-- フッター読み込み -->
+  <!-- フッターここから -->
   <footer class="l-footer">
     <div class="p-footer">
       <div class="p-footer__inner">
@@ -327,9 +330,10 @@ function validation($data)
       </div>
     </div>
   </footer>
+  <!-- フッターここまで -->
   <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="..//js/jQuery/jquery-3.5.0.min.js"></script>
+  <script src="..//js/main.js"></script>
 </body>
 
 </html>
