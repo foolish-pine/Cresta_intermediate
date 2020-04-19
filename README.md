@@ -28,17 +28,7 @@ HTML / CSS / Sass / JavaScript(jQuery) / PHP / Adobe XD / Visual Studio Code
 <br>
 
 ## スクリーンショット
+<img src="https://github.com/foolish-pine/Cresta_intermediate/blob/master/img/pc_index.png?raw=true" height=700px><img src="https://github.com/foolish-pine/Cresta_intermediate/blob/master/img/pc_contact.png?raw=true" height=700px>
 <br>
 <br>
-<img src="https://github.com/foolish-pine/Cresta_intermediate/blob/master/image/pc_index.png?raw=true" width=500px>
-<br>
-<br>
-<img src="https://github.com/foolish-pine/Cresta_intermediate/blob/master/image/pc_contact.png?raw=true" width=500px>
-<br>
-<br>
-<img src="https://github.com/foolish-pine/Cresta_intermediate/blob/master/image/sp_index.png?raw=true" width=500px>
-<br>
-<br>
-<img src="https://github.com/foolish-pine/Cresta_intermediate/blob/master/image/sp_contact.png?raw=true" width=500px>
-<br>
-<br>
+<img src="https://github.com/foolish-pine/Cresta_intermediate/blob/master/img/sp_index.png?raw=true" height=700px> <img src="https://github.com/foolish-pine/Cresta_intermediate/blob/master/img/sp_contact.png?raw=true" height=700px>
