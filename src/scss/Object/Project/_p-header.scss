@@ -86,11 +86,11 @@
     @include mq(pc) {
       margin-bottom: 0;
       margin-left: 29px;
-    }
 
-    &:hover {
-      border-bottom: 2px solid #fff;
-      transition: all 0.4s;
+      &:hover {
+        border-bottom: 2px solid #fff;
+        transition: all 0.4s;
+      }
     }
 
     a {
@@ -115,8 +115,9 @@
     }
   }
 
-  &__menuLine {
+  &__menu-line {
     position: absolute;
+    right: 0;
     width: 30px;
     height: 3px;
     background: #fff;

@@ -1,8 +1,3 @@
-<!-- 相対パス -->
-
-<!-- ナビゲーションリンクのパス -->
-
-<!-- ヘッダー読み込み -->
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -38,32 +33,32 @@
             <li class="p-header__item"><a class="js-smoothscroll" href="#contact">Contact</a></li>
           </ul>
         </nav>
-        <a class="p-header__menu">
-          <span class="p-header__menuLine"></span>
-          <span class="p-header__menuLine"></span>
-          <span class="p-header__menuLine"></span>
-        </a>
+        <button class="p-header__menu">
+          <span class="p-header__menu-line"></span>
+          <span class="p-header__menu-line"></span>
+          <span class="p-header__menu-line"></span>
+          </but>
       </div>
     </div>
   </header>
   <!-- ヘッダーここまで -->
   <main class="l-main">
-    <section class="p-mainVisual js-mainVisual">
-      <div class="p-mainVisual__slideshow">
+    <div class="p-main-visual js-main-visual">
+      <div class="p-main-visual__slideshow">
         <img src="img/fv-bgi_01@2x.jpg" alt="">
         <img src="img/fv-bgi_02@2x.jpg" alt="">
         <img src="img/fv-bgi_03@2x.jpg" alt="">
       </div>
-      <div class="p-mainVisual__catch">
+      <div class="p-main-visual__catch">
         <p>Design for Smile.</p>
         <p>快適なオフィスを<span></span>デザインする</p>
       </div>
-    </section>
-    <section id="concept" class="p-concept">
+    </div>
+    <div id="concept" class="p-concept">
       <div class="p-concept__inner--lg">
         <div class="p-concept__inner">
-          <h2 class="p-concept__sectionTitle  c-text__sectionTitle">CONCEPT</h2>
-          <h3 class="p-concept__sectionSubTitle c-text__sectionSubTitle">
+          <h2 class="p-concept__section-title  c-text__section-title">CONCEPT</h2>
+          <h3 class="p-concept__section-subtitle c-text__section-subtitle">
             “働きたくなる空間”をデザインすることで<span></span>
             人々を幸せにする。
           </h3>
@@ -77,13 +72,13 @@
             </div>
           </div>
         </div>
-        <p class="p-concept__sectionWatermark c-text__sectionWatermark">Our Concept</p>
+        <p class="p-concept__watermark c-text__watermark">Our Concept</p>
       </div>
-    </section>
-    <section id="works" class="p-works">
+    </div>
+    <div id="works" class="p-works">
       <div class="p-works__bg">
         <div class="p-concept__inner--lg">
-          <h2 class="p-works__sectionTitle c-text__sectionTitle">Works</h2>
+          <h2 class="p-works__section-title c-text__section-title">Works</h2>
           <div class="p-works__inner">
             <div class="p-works__container">
               <div class="p-works__card c-card">
@@ -115,13 +110,13 @@
               <a href="#">View more</a>
             </div>
           </div>
-          <p class="p-works__sectionWatermark c-text__sectionWatermark">Our Works</p>
+          <p class="p-works__watermark c-text__watermark">Our Works</p>
         </div>
       </div>
-    </section>
-    <section id="service" class="p-service">
+    </div>
+    <div id="service" class="p-service">
       <div class="p-service__inner">
-        <h2 class="p-service__sectionTitle c-text__sectionTitle">Service</h2>
+        <h2 class="p-service__section-title c-text__section-title">Service</h2>
       </div>
       <div class="p-service__container">
         <div class="p-service__content">
@@ -130,7 +125,7 @@
               <div class="p-service__image--hover"></div>
               <img src="img/service-img01@2x.jpg" alt="">
             </div>
-            <p class="p-service__contentName">Hearing</p>
+            <p class="p-service__content-name">Hearing</p>
           </a>
         </div>
         <div class="p-service__content">
@@ -139,7 +134,7 @@
               <div class="p-service__image--hover"></div>
               <img src="img/service-img02@2x.jpg" alt="">
             </div>
-            <p class="p-service__contentName">Planning</p>
+            <p class="p-service__content-name">Planning</p>
           </a>
         </div>
         <div class="p-service__content">
@@ -148,26 +143,26 @@
               <div class="p-service__image--hover"></div>
               <img src="img/service-img03@2x.jpg" alt="">
             </div>
-            <p class="p-service__contentName">Direction</p>
+            <p class="p-service__content-name">Direction</p>
           </a>
         </div>
       </div>
       <div class="p-service__inner--lg">
-        <p class="p-service__sectionWatermark c-text__sectionWatermark">Our Service</p>
+        <p class="p-service__watermark c-text__watermark">Our Service</p>
       </div>
-    </section>
-    <section id="contact" class="p-contact">
+    </div>
+    <div id="contact" class="p-contact">
       <div class="p-contact__inner">
-        <h2 class="p-contact__sectionTitle c-text__sectionTitle">Contact</h2>
+        <h2 class="p-contact__section-title c-text__section-title">Contact</h2>
         <p class="p-contact__text">お気軽にご相談ください。</p>
         <div class="p-contact__button c-button">
           <a href="contact/index.php">Contact</a>
         </div>
-        <p class="p-contact__sectionWatermark c-text__sectionWatermark">Contact us</p>
+        <p class="p-contact__watermark c-text__watermark">Contact us</p>
       </div>
-    </section>
+    </div>
   </main>
-  <!-- フッター読み込み -->
+
   <!-- フッターここから -->
   <footer class="l-footer">
     <div class="p-footer">

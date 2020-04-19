@@ -22,16 +22,18 @@
     border-radius: 51px;
   }
 
-  &:hover {
-    font-weight: 700;
-    background: #fff;
-    transition: all 0.4s;
-  }
-
   input {
     width: 100%;
     line-height: 60px;
     border: none;
     border-radius: 51px;
+  }
+
+  @include mq(pc) {
+    &:hover {
+      font-weight: 700;
+      background: #fff;
+      transition: all 0.4s;
+    }
   }
 }

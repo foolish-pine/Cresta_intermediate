@@ -1,14 +1,12 @@
 /* ================================================================
-  Concept
+  コンセプトコンテンツ
    ================================================================ */
 
 .p-concept {
-  padding: 186px 0 40px;
-  margin-top: -86px;
+  padding: 100px 0 40px;
 
   @include mq(pc) {
-    padding: 176px 0 67px;
-    margin-top: -76px;
+    padding: 100px 0 67px;
   }
 
   &__inner--lg {
@@ -28,14 +26,14 @@
     }
   }
 
-  &__sectionTitle {
+  &__section-title {
     @include mq(pc) {
       margin-bottom: 67px;
       letter-spacing: 0.05em;
     }
   }
 
-  &__sectionSubTitle {
+  &__section-subtitle {
     @include mq(pc) {
       span::before {
         white-space: pre;
@@ -78,7 +76,7 @@
     }
   }
 
-  &__sectionWatermark {
+  &__watermark {
     text-align: right;
   }
 }

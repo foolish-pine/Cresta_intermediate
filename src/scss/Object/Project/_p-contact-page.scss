@@ -1,5 +1,5 @@
 /* ================================================================
-  Contact Page
+  お問い合わせページ
    ================================================================ */
 
 .p-contact-page {
@@ -13,7 +13,7 @@
     }
   }
 
-  &__mainVisual {
+  &__main-visual {
     width: 100vw;
     padding: 175px 0 50px;
     margin: 0 calc(50% - 50vw) 30px;
@@ -24,7 +24,7 @@
     }
   }
 
-  &__sectionTitle {
+  &__section-title {
     justify-content: center;
     margin-bottom: 40px;
     color: #fff;
@@ -53,11 +53,7 @@
     }
   }
 
-  &__button {
-    margin: 0 auto 80px;
-  }
-
-  &__sectionWatermark {
+  &__watermark {
     color: #fff;
     text-align: left;
     opacity: 0.1;
@@ -163,12 +159,13 @@
     border-radius: 5px;
   }
 
-  &__buttonContainer {
+  &__button-container {
     display: flex;
   }
 
   &__button {
     width: 245px;
+    margin: 0 auto 80px;
   }
 
   &__button--back {

@@ -161,11 +161,11 @@ function validation($data)
 }
 ?>
 
-<!-- 相対パス -->
 
-<!-- ナビゲーションリンクのパス -->
 
-<!-- ヘッダー読み込み -->
+
+
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -201,22 +201,22 @@ function validation($data)
             <li class="p-header__item"><a class="js-smoothscroll" href="../index.php#contact">Contact</a></li>
           </ul>
         </nav>
-        <a class="p-header__menu">
-          <span class="p-header__menuLine"></span>
-          <span class="p-header__menuLine"></span>
-          <span class="p-header__menuLine"></span>
-        </a>
+        <button class="p-header__menu">
+          <span class="p-header__menu-line"></span>
+          <span class="p-header__menu-line"></span>
+          <span class="p-header__menu-line"></span>
+          </but>
       </div>
     </div>
   </header>
   <!-- ヘッダーここまで -->
   <main class="l-main">
-    <section id="contact-page" class="p-contact-page">
+    <div id="contact-page" class="p-contact-page">
       <div class="p-contact-page__inner">
-        <div class="p-contact-page__mainVisual js-mainVisual">
+        <div class="p-contact-page__main-visual js-main-visual">
           <div class="p-contact-page__inner">
-            <h2 class="p-contact-page__sectionTitle c-text__sectionTitle">Contact</h2>
-            <p class="p-contact-page__sectionWatermark c-text__sectionWatermark">Contact us</p>
+            <h2 class="p-contact-page__section-title c-text__section-title">Contact</h2>
+            <p class="p-contact-page__watermark c-text__watermark">Contact us</p>
           </div>
         </div>
         <!-- お問い合わせフォーム入力ページ -->
@@ -293,7 +293,7 @@ function validation($data)
                 echo '<div class="p-contact-page__textarea--confirmation">' . nl2br($clean['message']) . '</div>';
               } ?>
           </div>
-          <div class="p-contact-page__buttonContainer">
+          <div class="p-contact-page__button-container">
             <div class="p-contact-page__button p-contact-page__button--back c-button">
               <input type="submit" name="back" value="戻る">
             </div>
@@ -319,9 +319,9 @@ function validation($data)
         </div>
         <?php endif; ?>
       </div>
-    </section>
+    </div>
   </main>
-  <!-- フッター読み込み -->
+
   <!-- フッターここから -->
   <footer class="l-footer">
     <div class="p-footer">
