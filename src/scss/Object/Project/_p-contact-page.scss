@@ -161,6 +161,11 @@
 
   &__button-container {
     display: flex;
+    flex-direction: column;
+
+    @include mq(pc) {
+      flex-direction: row;
+    }
   }
 
   &__button {

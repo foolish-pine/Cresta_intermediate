@@ -114,7 +114,7 @@ if (!empty($clean['back'])) {
     $auto_reply_text .= "電話番号：" . $clean['tel'] . "\n";
     $auto_reply_text .= "メールアドレス：" . $clean['email'] . "\n";
     $auto_reply_text .= "その他：\n" . $clean['message'] . "\n\n";
-    $auto_reply_text .= "このメールは以下のサイトのお問い合わせフォームから送信されました。\nhttps://cresta-intermediate.foolish-pine.com/index.html";
+    $auto_reply_text .= "このメールは以下のサイトのお問い合わせフォームから送信されました。\nhttps://cresta-intermediate.foolish-pine.com";
 
     // 利用者へメール送信
     mb_send_mail($clean['email'], $auto_reply_subject, $auto_reply_text, $header);
@@ -129,7 +129,7 @@ if (!empty($clean['back'])) {
     $admin_reply_text .= "電話番号：" . $clean['tel'] . "\n";
     $admin_reply_text .= "メールアドレス：" . $clean['email'] . "\n";
     $admin_reply_text .= "その他：\n" . $clean['message'] . "\n\n";
-    $admin_reply_text .= "このメールは以下のサイトのお問い合わせフォームから送信されました。\nhttps://cresta-intermediate.foolish-pine.com/index.html";
+    $admin_reply_text .= "このメールは以下のサイトのお問い合わせフォームから送信されました。\nhttps://cresta-intermediate.foolish-pine.com";
 
     // 管理者へメール送信
     mb_send_mail($clean['email'], $admin_reply_subject, $admin_reply_text, $header);
@@ -177,10 +177,10 @@ function validation($data)
   <!-- 検索結果から除外する -->
   <meta name="robots" content="none">
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="..//img/favicon/apple-touch-icon.png" />
-  <link rel="icon" href="..//img/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png" />
+  <link rel="icon" href="../img/favicon/favicon.ico" />
   <!-- CSS -->
-  <link rel="stylesheet" href="..//css/style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
@@ -189,7 +189,7 @@ function validation($data)
     <div class="p-header">
       <div class="p-header__inner">
         <div class="p-header__logo">
-          <a href="..//index.php">
+          <a href="../index.php">
             <h1>Cresta Design</h1>
           </a>
         </div>
@@ -315,7 +315,7 @@ function validation($data)
         <?php elseif ($page_flag === 2) : ?>
         <h2 class="p-contact-page__text--confirmation c-text">送信が完了しました。</h2>
         <div class="p-contact-page__button c-button">
-          <a href="index.html">トップへ戻る</a>
+          <a href="../index.php">トップへ戻る</a>
         </div>
         <?php endif; ?>
       </div>
@@ -332,8 +332,8 @@ function validation($data)
   </footer>
   <!-- フッターここまで -->
   <!-- jQuery -->
-  <script src="..//js/jQuery/jquery-3.5.0.min.js"></script>
-  <script src="..//js/main.js"></script>
+  <script src="../js/jQuery/jquery-3.5.0.min.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 
 </html>

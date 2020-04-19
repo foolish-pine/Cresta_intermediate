@@ -114,7 +114,7 @@ if (!empty($clean['back'])) {
     $auto_reply_text .= "電話番号：" . $clean['tel'] . "\n";
     $auto_reply_text .= "メールアドレス：" . $clean['email'] . "\n";
     $auto_reply_text .= "その他：\n" . $clean['message'] . "\n\n";
-    $auto_reply_text .= "このメールは以下のサイトのお問い合わせフォームから送信されました。\nhttps://cresta-intermediate.foolish-pine.com/index.html";
+    $auto_reply_text .= "このメールは以下のサイトのお問い合わせフォームから送信されました。\nhttps://cresta-intermediate.foolish-pine.com";
 
     // 利用者へメール送信
     mb_send_mail($clean['email'], $auto_reply_subject, $auto_reply_text, $header);
@@ -129,7 +129,7 @@ if (!empty($clean['back'])) {
     $admin_reply_text .= "電話番号：" . $clean['tel'] . "\n";
     $admin_reply_text .= "メールアドレス：" . $clean['email'] . "\n";
     $admin_reply_text .= "その他：\n" . $clean['message'] . "\n\n";
-    $admin_reply_text .= "このメールは以下のサイトのお問い合わせフォームから送信されました。\nhttps://cresta-intermediate.foolish-pine.com/index.html";
+    $admin_reply_text .= "このメールは以下のサイトのお問い合わせフォームから送信されました。\nhttps://cresta-intermediate.foolish-pine.com";
 
     // 管理者へメール送信
     mb_send_mail($clean['email'], $admin_reply_subject, $admin_reply_text, $header);
@@ -162,7 +162,7 @@ function validation($data)
 ?>
 
 <%# 相対パス %>
-<% path = '../'; %>
+<% path = '..'; %>
 <%# ナビゲーションリンクのパス %>
 <% scrollPath = '../index.php'; %>
 <%# ヘッダー読み込み %>
@@ -279,7 +279,7 @@ function validation($data)
       <?php elseif ($page_flag === 2) : ?>
       <h2 class="p-contact-page__text--confirmation c-text">送信が完了しました。</h2>
       <div class="p-contact-page__button c-button">
-        <a href="index.html">トップへ戻る</a>
+        <a href="<%= path %>/index.php">トップへ戻る</a>
       </div>
       <?php endif; ?>
     </div>
