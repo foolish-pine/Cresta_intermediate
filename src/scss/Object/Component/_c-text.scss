@@ -9,14 +9,14 @@
   color: $color-text;
   letter-spacing: 0.05em;
 
-  &__sectionTitle {
+  &__section-title {
     display: flex;
     align-items: center;
     margin-bottom: 50px;
     font-size: 3rem;
     font-style: italic;
     font-weight: 700;
-    color: $color-text-sectionTitle;
+    color: $color-text-section-title;
     letter-spacing: 0.1em;
 
     @include mq(pc) {
@@ -29,7 +29,7 @@
       height: 5px;
       margin-left: 28px;
       content: "";
-      background: $color-text-sectionBorder;
+      background: $color-text-section-border;
 
       @include mq(pc) {
         width: 200px;
@@ -37,12 +37,12 @@
     }
   }
 
-  &__sectionSubTitle {
+  &__section-subtitle {
     margin-bottom: 23px;
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.5;
-    color: $color-text-sectionSubTitle;
+    color: $color-text-section-subtitle;
     text-align: center;
     letter-spacing: 0.05em;
 
@@ -54,7 +54,7 @@
     }
   }
 
-  &__sectionWatermark {
+  &__watermark {
     font-size: 4rem;
     color: $color-text;
     letter-spacing: 0.05em;

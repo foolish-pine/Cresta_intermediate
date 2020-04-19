@@ -1,16 +1,8 @@
 /* ================================================================
-  Works
+  worksコンテンツ
    ================================================================ */
 
 .p-works {
-  padding-top: 97px;
-  margin-top: -97px;
-
-  @include mq(pc) {
-    padding-top: 76px;
-    margin-top: -76px;
-  }
-
   &__bg {
     padding: 100px 0 45px;
     background: url(../img/works-bgi@2x.jpg) center / cover;
@@ -37,7 +29,7 @@
     }
   }
 
-  &__sectionTitle {
+  &__section-title {
     justify-content: center;
     color: #fff;
 
@@ -83,7 +75,7 @@
     }
   }
 
-  &__sectionWatermark {
+  &__watermark {
     color: #fff;
     text-align: left;
     opacity: 0.1;

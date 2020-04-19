@@ -1,5 +1,5 @@
 /* ================================================================
-  Contact
+  contactコンテンツ
    ================================================================ */
 
 .p-contact {
@@ -20,7 +20,7 @@
     }
   }
 
-  &__sectionTitle {
+  &__section-title {
     justify-content: flex-end;
     margin-bottom: 82px;
     color: #fff;
@@ -51,7 +51,7 @@
     }
   }
 
-  &__sectionWatermark {
+  &__watermark {
     color: #fff;
     text-align: left;
     opacity: 0.1;

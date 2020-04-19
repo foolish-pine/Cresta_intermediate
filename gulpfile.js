@@ -13,6 +13,7 @@ var mozjpeg = require("imagemin-mozjpeg");
 var ejs = require("gulp-ejs");
 var rename = require("gulp-rename"); //.ejsの拡張子を変更
 var htmlbeautify = require("gulp-html-beautify");
+var replace = require("gulp-replace");
 
 // scssのコンパイル
 gulp.task("sass", function () {

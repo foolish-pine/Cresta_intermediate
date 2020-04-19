@@ -2,14 +2,14 @@
   jQuery
    ================================================================ */
 
-// ---------------------------------------------
-// スティッキーヘッダー
-// ---------------------------------------------
-
 $(function () {
+  // ---------------------------------------------
+  // スティッキーヘッダー
+  // ---------------------------------------------
+
   var $window = $(window),
     $header = $(".p-header"),
-    threshold = $(".js-mainVisual").outerHeight();
+    threshold = $(".js-main-visual").outerHeight();
 
   $window.on("scroll", function () {
     if ($window.scrollTop() > threshold) {
@@ -18,65 +18,62 @@ $(function () {
       $header.removeClass("visible");
     }
   });
-});
 
-// ---------------------------------------------
-// ハンバーガーメニュー
-// ---------------------------------------------
+  // ---------------------------------------------
+  // ハンバーガーメニュー
+  // ---------------------------------------------
 
-//ウィンドウのリサイズ後にリロードする
-$(function () {
-  var timer = false;
-  var prewidth = $(window).width();
-  $(window).resize(function () {
-    if (timer !== false) {
-      clearTimeout(timer);
-    }
-    timer = setTimeout(function () {
-      var nowWidth = $(window).width();
-      if (prewidth !== nowWidth) {
-        location.reload();
-      }
-      prewidth = nowWidth;
-    }, 200);
-  });
-});
+  var mq = window.matchMedia("screen and (max-width:767px)");
 
-// ヘッダー
-$(function () {
-  $(".p-header__menu").on("click", function () {
-    $(".p-header__menuLine").stop(true).toggleClass("active");
-    $(".p-header__nav").stop(true).fadeToggle();
-  });
-});
+  var $headerNav = $(".p-header__nav"),
+    $headerMenu = $(".p-header__menu"),
+    $headerMenuLine = $(".p-header__menu-line");
 
-$(function () {
-  $(".p-header__nav, .p-header__logo").on("click", function () {
-    if ($(".p-header__menuLine").hasClass("active")) {
-      $(".p-header__menuLine").stop(true).toggleClass("active");
-      $(".p-header__nav").stop(true).fadeToggle();
+  $(window).on("resize", function () {
+    if (mq.matches) {
+      // 画面幅767px以下のとき
+      // navを非表示にする
+      $headerNav.hide();
+      // メニューアイコンを非activeにする
+      $headerMenuLine.removeClass("active");
+    } else {
+      // 画面幅768px以上のとき
+      // navを表示させる
+      $headerNav.show();
     }
   });
-});
 
-// ---------------------------------------------
-// スムーススクロール（ページ内リンク）
-// ---------------------------------------------
-$(function () {
+  // メニューアイコンをクリックしてnavを開閉する
+  $headerMenu.on("click", function () {
+    $headerMenuLine.stop(true).toggleClass("active");
+    $headerNav.stop(true).fadeToggle();
+  });
+
+  // ナビの余白クリックでメニュー閉じる
+  $headerNav.on("click", function () {
+    if ($headerMenuLine.hasClass("active")) {
+      $headerMenuLine.stop(true).toggleClass("active");
+      $headerNav.stop(true).fadeToggle();
+    }
+  });
+
+  // ---------------------------------------------
+  // スムーススクロール（ページ内リンク）
+  // ---------------------------------------------
+
   $(".js-smoothscroll").click(function () {
-    var speed = 500;
-    (href = $(this).attr("href")),
-      (target = $(href == "#" || href == "" ? "html" : href)),
-      (position = target.offset().top);
+    var speed = 500,
+      href = $(this).attr("href"),
+      target = $(href == "#" || href == "" ? "html" : href),
+      headerHeight = $header.outerHeight(),
+      position = target.offset().top - headerHeight; // ヘッダーの高さ分スクロール量を減らす
     $("html, body").animate({ scrollTop: position }, speed);
   });
-});
 
-// ---------------------------------------------
-// スライドショー
-// ---------------------------------------------
-$(function () {
-  var $slides = $(".p-mainVisual__slideshow").find("img"),
+  // ---------------------------------------------
+  // スライドショー
+  // ---------------------------------------------
+  var $slides = $(".p-main-visual__slideshow").find("img"),
     slideCount = $slides.length,
     currentIndex = 0;
 
