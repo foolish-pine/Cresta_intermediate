@@ -8,8 +8,8 @@ $(function () {
   // ---------------------------------------------
 
   var $window = $(window),
-    $header = $(".js-header"),
-    threshold = $(".js-main-visual").outerHeight();
+    $header = $(".p-header"),
+    threshold = $(".js-sticky-header-threshold").outerHeight();
 
   $window.on("scroll", function () {
     if ($window.scrollTop() > threshold) {
@@ -25,9 +25,9 @@ $(function () {
 
   var mq = window.matchMedia("screen and (max-width:767px)");
 
-  var $headerNav = $(".js-headerNav"),
-    $headerMenuIcon = $(".js-headerMenuIcon"),
-    $headerMenuIconLine = $(".js-headerMenuIconLine");
+  var $headerNav = $(".p-header__nav"),
+    $hamburgerMenu = $(".js-hamburger-menu"),
+    $hamburgerMenuLine = $(".js-hamburger-menu-line");
 
   $(window).on("resize", function () {
     if (mq.matches) {
@@ -35,7 +35,7 @@ $(function () {
       // navを非表示にする
       $headerNav.hide();
       // メニューアイコンを非activeにする
-      $headerMenuIconLine.removeClass("active");
+      $hamburgerMenuLine.removeClass("active");
     } else {
       // 画面幅768px以上のとき
       // navを表示させる
@@ -44,15 +44,15 @@ $(function () {
   });
 
   // メニューアイコンをクリックしてnavを開閉する
-  $headerMenuIcon.on("click", function () {
-    $headerMenuIconLine.stop(true).toggleClass("active");
+  $hamburgerMenu.on("click", function () {
+    $hamburgerMenuLine.stop(true).toggleClass("active");
     $headerNav.stop(true).fadeToggle();
   });
 
   // ナビの余白クリックでメニュー閉じる
   $headerNav.on("click", function () {
-    if ($headerMenuIconLine.hasClass("active")) {
-      $headerMenuIconLine.stop(true).toggleClass("active");
+    if ($hamburgerMenuLine.hasClass("active")) {
+      $hamburgerMenuLine.stop(true).toggleClass("active");
       $headerNav.stop(true).fadeToggle();
     }
   });
