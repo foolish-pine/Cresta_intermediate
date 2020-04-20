@@ -18,25 +18,26 @@
 <body>
   <!-- ヘッダーここから -->
   <header class="l-header">
-    <div class="p-header">
+    <div class="p-header js-header">
       <div class="p-header__inner">
         <div class="p-header__logo">
           <a href="./index.php">
             <h1>Cresta Design</h1>
           </a>
         </div>
-        <nav class="p-header__nav">
+        <nav class="p-header__nav js-headerNav">
           <ul class="p-header__list">
             <li class="p-header__item"><a class="js-smoothscroll" href="#concept">Concept</a></li>
             <li class="p-header__item"><a class="js-smoothscroll" href="#service">Service</a></li>
             <li class="p-header__item"><a class="js-smoothscroll" href="#works">Works</a></li>
-            <li class="p-header__item"><a class="js-smoothscroll" href="#contact">Contact</a></li>
+            <li class="p-header__item"><a class="js-smoothscroll" href="./contact/index.php">Contact</a>
+            </li>
           </ul>
         </nav>
-        <button class="p-header__menu">
-          <span class="p-header__menu-line"></span>
-          <span class="p-header__menu-line"></span>
-          <span class="p-header__menu-line"></span>
+        <button class="p-header__menu js-headerMenuIcon">
+          <span class="p-header__menu-line js-headerMenuIconLine"></span>
+          <span class="p-header__menu-line js-headerMenuIconLine"></span>
+          <span class="p-header__menu-line js-headerMenuIconLine"></span>
           </but>
       </div>
     </div>
@@ -44,7 +45,7 @@
   <!-- ヘッダーここまで -->
   <main class="l-main">
     <div class="p-main-visual js-main-visual">
-      <div class="p-main-visual__slideshow">
+      <div class="p-main-visual__slideshow js-slideshow">
         <img src="img/fv-bgi_01@2x.jpg" alt="">
         <img src="img/fv-bgi_02@2x.jpg" alt="">
         <img src="img/fv-bgi_03@2x.jpg" alt="">
@@ -122,7 +123,7 @@
         <div class="p-service__content">
           <a href="#">
             <div class="p-service__image">
-              <div class="p-service__image--hover"></div>
+              <span class="p-service__image--hover"></span>
               <img src="img/service-img01@2x.jpg" alt="">
             </div>
             <p class="p-service__content-name">Hearing</p>
@@ -131,7 +132,7 @@
         <div class="p-service__content">
           <a href="#">
             <div class="p-service__image">
-              <div class="p-service__image--hover"></div>
+              <span class="p-service__image--hover"></span>
               <img src="img/service-img02@2x.jpg" alt="">
             </div>
             <p class="p-service__content-name">Planning</p>
@@ -140,7 +141,7 @@
         <div class="p-service__content">
           <a href="#">
             <div class="p-service__image">
-              <div class="p-service__image--hover"></div>
+              <span class="p-service__image--hover"></span>
               <img src="img/service-img03@2x.jpg" alt="">
             </div>
             <p class="p-service__content-name">Direction</p>
