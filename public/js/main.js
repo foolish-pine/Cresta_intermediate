@@ -8,7 +8,7 @@ $(function () {
   // ---------------------------------------------
 
   var $window = $(window),
-    $header = $(".p-header"),
+    $header = $(".js-header"),
     threshold = $(".js-main-visual").outerHeight();
 
   $window.on("scroll", function () {
@@ -25,9 +25,9 @@ $(function () {
 
   var mq = window.matchMedia("screen and (max-width:767px)");
 
-  var $headerNav = $(".p-header__nav"),
-    $headerMenu = $(".p-header__menu"),
-    $headerMenuLine = $(".p-header__menu-line");
+  var $headerNav = $(".js-headerNav"),
+    $headerMenuIcon = $(".js-headerMenuIcon"),
+    $headerMenuIconLine = $(".js-headerMenuIconLine");
 
   $(window).on("resize", function () {
     if (mq.matches) {
@@ -35,7 +35,7 @@ $(function () {
       // navを非表示にする
       $headerNav.hide();
       // メニューアイコンを非activeにする
-      $headerMenuLine.removeClass("active");
+      $headerMenuIconLine.removeClass("active");
     } else {
       // 画面幅768px以上のとき
       // navを表示させる
@@ -44,15 +44,15 @@ $(function () {
   });
 
   // メニューアイコンをクリックしてnavを開閉する
-  $headerMenu.on("click", function () {
-    $headerMenuLine.stop(true).toggleClass("active");
+  $headerMenuIcon.on("click", function () {
+    $headerMenuIconLine.stop(true).toggleClass("active");
     $headerNav.stop(true).fadeToggle();
   });
 
   // ナビの余白クリックでメニュー閉じる
   $headerNav.on("click", function () {
-    if ($headerMenuLine.hasClass("active")) {
-      $headerMenuLine.stop(true).toggleClass("active");
+    if ($headerMenuIconLine.hasClass("active")) {
+      $headerMenuIconLine.stop(true).toggleClass("active");
       $headerNav.stop(true).fadeToggle();
     }
   });
@@ -73,7 +73,7 @@ $(function () {
   // ---------------------------------------------
   // スライドショー
   // ---------------------------------------------
-  var $slides = $(".p-main-visual__slideshow").find("img"),
+  var $slides = $(".js-slideshow").find("img"),
     slideCount = $slides.length,
     currentIndex = 0;
 

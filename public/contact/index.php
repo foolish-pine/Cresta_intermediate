@@ -186,25 +186,26 @@ function validation($data)
 <body>
   <!-- ヘッダーここから -->
   <header class="l-header">
-    <div class="p-header">
+    <div class="p-header js-header">
       <div class="p-header__inner">
         <div class="p-header__logo">
           <a href="../index.php">
             <h1>Cresta Design</h1>
           </a>
         </div>
-        <nav class="p-header__nav">
+        <nav class="p-header__nav js-headerNav">
           <ul class="p-header__list">
             <li class="p-header__item"><a class="js-smoothscroll" href="../index.php#concept">Concept</a></li>
             <li class="p-header__item"><a class="js-smoothscroll" href="../index.php#service">Service</a></li>
             <li class="p-header__item"><a class="js-smoothscroll" href="../index.php#works">Works</a></li>
-            <li class="p-header__item"><a class="js-smoothscroll" href="../index.php#contact">Contact</a></li>
+            <li class="p-header__item"><a class="js-smoothscroll" href="../contact/index.php">Contact</a>
+            </li>
           </ul>
         </nav>
-        <button class="p-header__menu">
-          <span class="p-header__menu-line"></span>
-          <span class="p-header__menu-line"></span>
-          <span class="p-header__menu-line"></span>
+        <button class="p-header__menu js-headerMenuIcon">
+          <span class="p-header__menu-line js-headerMenuIconLine"></span>
+          <span class="p-header__menu-line js-headerMenuIconLine"></span>
+          <span class="p-header__menu-line js-headerMenuIconLine"></span>
           </but>
       </div>
     </div>
