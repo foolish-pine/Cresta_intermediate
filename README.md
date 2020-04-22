@@ -18,7 +18,7 @@
 <br>
 
 ## 制作に使用した言語・ツール
-HTML / CSS / Sass / JavaScript(jQuery) / PHP / Adobe XD / Visual Studio Code
+HTML / CSS / Sass / JavaScript(jQuery) / PHP / gulp / Adobe XD / Visual Studio Code
 <br>
 <br>
 
