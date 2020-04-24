@@ -1,3 +1,4 @@
+<!-- コンタクトフォーム用PHPここから -->
 <?php
 session_start();
 
@@ -160,6 +161,7 @@ function validation($data)
   return $error;
 }
 ?>
+<!-- コンタクトフォーム用PHPここまで -->
 
 
 
@@ -211,7 +213,9 @@ function validation($data)
     </div>
   </header>
   <!-- ヘッダーここまで -->
+  <!-- メインここから -->
   <main class="l-main">
+    <!-- contact-pageコンテンツここから -->
     <div id="contact-page" class="p-contact-page">
       <div class="p-contact-page__inner">
         <div class="p-contact-page__main-visual js-sticky-header-threshold">
@@ -220,7 +224,7 @@ function validation($data)
             <p class="p-contact-page__watermark c-text__watermark">Contact us</p>
           </div>
         </div>
-        <!-- お問い合わせフォーム入力ページ -->
+        <!-- お問い合わせフォーム入力ページここから -->
         <?php if ($page_flag === 0) : ?>
         <form class="p-contact-page__form" action="" method="post">
           <input type="hidden" name="token" value="<?php $token = $_SESSION['token']; echo $token?>">
@@ -259,7 +263,8 @@ function validation($data)
             <input type="submit" name="confirmation" value="確認画面へ">
           </div>
         </form>
-        <!-- お問い合わせフォーム確認ページ -->
+        <!-- お問い合わせフォーム入力ページここまで -->
+        <!-- お問い合わせフォーム確認ページここから -->
         <?php elseif ($page_flag === 1) : ?>
         <form class="p-contact-page__form" action="" method="post">
           <p class="p-contact-page__text--confirmation c-text">
@@ -312,16 +317,20 @@ function validation($data)
           <input type="hidden" name="email" value="<?php echo $clean['email']; ?>">
           <input type="hidden" name="message" value="<?php echo $clean['message']; ?>">
         </form>
-        <!-- お問い合わせフォーム完了ページ -->
+        <!-- お問い合わせフォーム確認ページここまで -->
+        <!-- お問い合わせフォーム完了ページここから -->
         <?php elseif ($page_flag === 2) : ?>
         <h2 class="p-contact-page__text--confirmation c-text">送信が完了しました。</h2>
         <div class="p-contact-page__button c-button">
           <a href="../index.php">トップへ戻る</a>
         </div>
         <?php endif; ?>
+        <!-- お問い合わせフォーム完了ページここまで -->
       </div>
     </div>
+    <!-- contact-pageコンテンツここまで -->
   </main>
+  <!-- メインここまで -->
 
   <!-- フッターここから -->
   <footer class="l-footer">

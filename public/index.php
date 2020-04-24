@@ -43,7 +43,9 @@
     </div>
   </header>
   <!-- ヘッダーここまで -->
+  <!-- メインここから -->
   <main class="l-main">
+    <!-- メインビジュアルここから -->
     <div class="p-main-visual js-sticky-header-threshold">
       <div class="p-main-visual__slideshow js-slideshow">
         <img src="img/fv-bgi_01@2x.jpg" alt="">
@@ -55,6 +57,8 @@
         <p>快適なオフィスを<span></span>デザインする</p>
       </div>
     </div>
+    <!-- メインビジュアルここまで -->
+    <!-- conceptコンテンツここから -->
     <div id="concept" class="p-concept">
       <div class="p-concept__inner--lg">
         <div class="p-concept__inner">
@@ -78,6 +82,8 @@
         <p class="p-concept__watermark c-text__watermark">Our Concept</p>
       </div>
     </div>
+    <!-- conceptコンテンツここまで -->
+    <!-- worksコンテンツここから -->
     <div id="works" class="p-works">
       <div class="p-works__bg">
         <div class="p-concept__inner--lg">
@@ -117,6 +123,8 @@
         </div>
       </div>
     </div>
+    <!-- worksコンテンツここまで -->
+    <!-- serviceコンテンツここから -->
     <div id="service" class="p-service">
       <div class="p-service__inner">
         <h2 class="p-service__section-title c-text__section-title">Service</h2>
@@ -154,6 +162,8 @@
         <p class="p-service__watermark c-text__watermark">Our Service</p>
       </div>
     </div>
+    <!-- serviceコンテンツここまで -->
+    <!-- contactコンテンツここから -->
     <div id="contact" class="p-contact">
       <div class="p-contact__inner">
         <h2 class="p-contact__section-title c-text__section-title">Contact</h2>
@@ -164,7 +174,9 @@
         <p class="p-contact__watermark c-text__watermark">Contact us</p>
       </div>
     </div>
+    <!-- contactコンテンツここまで -->
   </main>
+  <!-- メインここまで -->
 
   <!-- フッターここから -->
   <footer class="l-footer">
