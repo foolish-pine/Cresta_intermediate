@@ -8,8 +8,8 @@ $(function () {
   // ---------------------------------------------
 
   var $window = $(window),
-    $header = $(".js-header"),
-    threshold = $(".js-main-visual").outerHeight();
+    $header = $(".p-header"),
+    threshold = $(".js-sticky-header-threshold").outerHeight();
 
   $window.on("scroll", function () {
     if ($window.scrollTop() > threshold) {
@@ -25,9 +25,9 @@ $(function () {
 
   var mq = window.matchMedia("screen and (max-width:767px)");
 
-  var $headerNav = $(".js-headerNav"),
-    $headerMenuIcon = $(".js-headerMenuIcon"),
-    $headerMenuIconLine = $(".js-headerMenuIconLine");
+  var $headerNav = $(".p-header__nav"),
+    $hamburgerMenu = $(".js-hamburger-menu"),
+    $hamburgerMenuLine = $(".js-hamburger-menu-line");
 
   $(window).on("resize", function () {
     if (mq.matches) {
@@ -35,7 +35,7 @@ $(function () {
       // navを非表示にする
       $headerNav.hide();
       // メニューアイコンを非activeにする
-      $headerMenuIconLine.removeClass("active");
+      $hamburgerMenuLine.removeClass("active");
     } else {
       // 画面幅768px以上のとき
       // navを表示させる
@@ -44,15 +44,15 @@ $(function () {
   });
 
   // メニューアイコンをクリックしてnavを開閉する
-  $headerMenuIcon.on("click", function () {
-    $headerMenuIconLine.stop(true).toggleClass("active");
+  $hamburgerMenu.on("click", function () {
+    $hamburgerMenuLine.stop(true).toggleClass("active");
     $headerNav.stop(true).fadeToggle();
   });
 
   // ナビの余白クリックでメニュー閉じる
   $headerNav.on("click", function () {
-    if ($headerMenuIconLine.hasClass("active")) {
-      $headerMenuIconLine.stop(true).toggleClass("active");
+    if ($hamburgerMenuLine.hasClass("active")) {
+      $hamburgerMenuLine.stop(true).toggleClass("active");
       $headerNav.stop(true).fadeToggle();
     }
   });
@@ -68,6 +68,35 @@ $(function () {
       headerHeight = $header.outerHeight(),
       position = target.offset().top - headerHeight; // ヘッダーの高さ分スクロール量を減らす
     $("html, body").animate({ scrollTop: position }, speed);
+  });
+
+  // ---------------------------------------------
+  // スクロールフェードイン
+  // ---------------------------------------------
+
+  var effect_pos = 300, // 画面下からどの位置でフェードさせるか(px)
+    effect_time = 2000; // エフェクトの時間(ms) 1秒なら1000
+
+  // フェードする前のcssを定義
+  $(".js-scroll-fadein").css({
+    opacity: 0,
+  });
+
+  // スクロールまたはロードするたびに実行
+  $(window).on("scroll load", function () {
+    var scrollBtm = $(this).scrollTop() + $(this).height(),
+      threshold = scrollBtm - effect_pos;
+
+    // 要素が可視範囲に入ったとき、エフェクトが発動
+    $(".js-scroll-fadein").each(function () {
+      var thisPos = $(this).offset().top;
+      if (threshold > thisPos) {
+        $(this).css({
+          opacity: 1,
+          transition: effect_time + "ms",
+        });
+      }
+    });
   });
 
   // ---------------------------------------------

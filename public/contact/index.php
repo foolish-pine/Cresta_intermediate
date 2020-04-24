@@ -186,14 +186,14 @@ function validation($data)
 <body>
   <!-- ヘッダーここから -->
   <header class="l-header">
-    <div class="p-header js-header">
+    <div class="p-header">
       <div class="p-header__inner">
         <div class="p-header__logo">
           <a href="../index.php">
             <h1>Cresta Design</h1>
           </a>
         </div>
-        <nav class="p-header__nav js-headerNav">
+        <nav class="p-header__nav">
           <ul class="p-header__list">
             <li class="p-header__item"><a class="js-smoothscroll" href="../index.php#concept">Concept</a></li>
             <li class="p-header__item"><a class="js-smoothscroll" href="../index.php#service">Service</a></li>
@@ -202,10 +202,10 @@ function validation($data)
             </li>
           </ul>
         </nav>
-        <button class="p-header__menu js-headerMenuIcon">
-          <span class="p-header__menu-line js-headerMenuIconLine"></span>
-          <span class="p-header__menu-line js-headerMenuIconLine"></span>
-          <span class="p-header__menu-line js-headerMenuIconLine"></span>
+        <button class="p-header__menu js-hamburger-menu">
+          <span class="p-header__menu-line js-hamburger-menu-line"></span>
+          <span class="p-header__menu-line js-hamburger-menu-line"></span>
+          <span class="p-header__menu-line js-hamburger-menu-line"></span>
           </but>
       </div>
     </div>
@@ -214,7 +214,7 @@ function validation($data)
   <main class="l-main">
     <div id="contact-page" class="p-contact-page">
       <div class="p-contact-page__inner">
-        <div class="p-contact-page__main-visual js-main-visual">
+        <div class="p-contact-page__main-visual js-sticky-header-threshold">
           <div class="p-contact-page__inner">
             <h2 class="p-contact-page__section-title c-text__section-title">Contact</h2>
             <p class="p-contact-page__watermark c-text__watermark">Contact us</p>

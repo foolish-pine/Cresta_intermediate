@@ -18,14 +18,14 @@
 <body>
   <!-- ヘッダーここから -->
   <header class="l-header">
-    <div class="p-header js-header">
+    <div class="p-header">
       <div class="p-header__inner">
         <div class="p-header__logo">
           <a href="./index.php">
             <h1>Cresta Design</h1>
           </a>
         </div>
-        <nav class="p-header__nav js-headerNav">
+        <nav class="p-header__nav">
           <ul class="p-header__list">
             <li class="p-header__item"><a class="js-smoothscroll" href="#concept">Concept</a></li>
             <li class="p-header__item"><a class="js-smoothscroll" href="#service">Service</a></li>
@@ -34,17 +34,17 @@
             </li>
           </ul>
         </nav>
-        <button class="p-header__menu js-headerMenuIcon">
-          <span class="p-header__menu-line js-headerMenuIconLine"></span>
-          <span class="p-header__menu-line js-headerMenuIconLine"></span>
-          <span class="p-header__menu-line js-headerMenuIconLine"></span>
+        <button class="p-header__menu js-hamburger-menu">
+          <span class="p-header__menu-line js-hamburger-menu-line"></span>
+          <span class="p-header__menu-line js-hamburger-menu-line"></span>
+          <span class="p-header__menu-line js-hamburger-menu-line"></span>
           </but>
       </div>
     </div>
   </header>
   <!-- ヘッダーここまで -->
   <main class="l-main">
-    <div class="p-main-visual js-main-visual">
+    <div class="p-main-visual js-sticky-header-threshold">
       <div class="p-main-visual__slideshow js-slideshow">
         <img src="img/fv-bgi_01@2x.jpg" alt="">
         <img src="img/fv-bgi_02@2x.jpg" alt="">
@@ -59,17 +59,19 @@
       <div class="p-concept__inner--lg">
         <div class="p-concept__inner">
           <h2 class="p-concept__section-title  c-text__section-title">CONCEPT</h2>
-          <h3 class="p-concept__section-subtitle c-text__section-subtitle">
-            “働きたくなる空間”をデザインすることで<span></span>
-            人々を幸せにする。
-          </h3>
-          <div class="p-concept__container">
-            <p class="p-concept__text c-text">
-              私たちは、オフィスに特化した空間デザイン専門としております。その理由は、「働きたくなる空間で仕事ができれば多くの人を幸せにできるのではないか」と考えるためです。そんな想いの株式会社Cresta
-              Designだからこそできる空間デザインを提供させていただきます。
-            </p>
-            <div class="p-concept__image">
-              <img src="img/concept-image@2x.jpg" alt="">
+          <div class="js-scroll-fadein">
+            <h3 class="p-concept__section-subtitle c-text__section-subtitle">
+              “働きたくなる空間”をデザインすることで<span></span>
+              人々を幸せにする。
+            </h3>
+            <div class="p-concept__container">
+              <p class="p-concept__text c-text">
+                私たちは、オフィスに特化した空間デザイン専門としております。その理由は、「働きたくなる空間で仕事ができれば多くの人を幸せにできるのではないか」と考えるためです。そんな想いの株式会社Cresta
+                Designだからこそできる空間デザインを提供させていただきます。
+              </p>
+              <div class="p-concept__image">
+                <img src="img/concept-image@2x.jpg" alt="">
+              </div>
             </div>
           </div>
         </div>
