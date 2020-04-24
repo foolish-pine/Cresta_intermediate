@@ -71,6 +71,35 @@ $(function () {
   });
 
   // ---------------------------------------------
+  // スクロールフェードイン
+  // ---------------------------------------------
+
+  var effect_pos = 300, // 画面下からどの位置でフェードさせるか(px)
+    effect_time = 2000; // エフェクトの時間(ms) 1秒なら1000
+
+  // フェードする前のcssを定義
+  $(".js-scroll-fadein").css({
+    opacity: 0,
+  });
+
+  // スクロールまたはロードするたびに実行
+  $(window).on("scroll load", function () {
+    var scrollBtm = $(this).scrollTop() + $(this).height(),
+      threshold = scrollBtm - effect_pos;
+
+    // 要素が可視範囲に入ったとき、エフェクトが発動
+    $(".js-scroll-fadein").each(function () {
+      var thisPos = $(this).offset().top;
+      if (threshold > thisPos) {
+        $(this).css({
+          opacity: 1,
+          transition: effect_time + "ms",
+        });
+      }
+    });
+  });
+
+  // ---------------------------------------------
   // スライドショー
   // ---------------------------------------------
   var $slides = $(".js-slideshow").find("img"),
